@@ -1,0 +1,236 @@
+// oem
+.oem_info {
+    text-align: center;
+    padding-bottom: 150px;
+    h1 {
+        font-size: 60px;
+        font-weight: bolder;
+        color: $green;
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+    p {
+        width: 1000px;
+        margin: 0 auto;
+        line-height: 32px;
+        font-size: 22px;
+        color: $black;
+        padding-bottom: 60px;
+    }
+    .group {
+        &_box {
+            width: 100%;
+            .group_info {
+                padding: 70px 80px;
+                display: flex;
+                .image {
+                    overflow: hidden;
+                }
+                .word {
+                    .title {
+                        display: flex;
+                        border-top: 1px solid $gray;
+                        border-bottom: 1px solid $gray;
+                        img {
+                            width: 50px;
+                            height: 70px;
+                            margin-right: 40px;
+                            padding: 20px;
+                        }
+                        h2 {
+                            font-size: 30px;
+                            font-weight: bold;
+                            color: $black;
+                            display: flex;
+                            align-items: center;
+                        }
+                    }
+                    p {
+                        width: 560px;
+                        text-align: left;
+                        line-height: 32px;
+                        padding-bottom: 65px;
+                        padding-top: 30px;
+                    }
+                    .btn {
+                        @include btn($green, $white, 18px);
+                        width: 560px;
+                        height: 60px;
+                        div {
+                            top: 20px;
+                            left: 235px;
+                        }
+                        &:hover {
+                            .group_info {
+                                div {
+                                    overflow: hidden;
+                                    img {
+                                        transform:scale(1.2, 1.2);
+                                        transition: all 1s ease-out;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &_box:nth-child(2n+1) {
+            background-color: $white;
+            .word {
+                margin-left: 80px;
+            }
+        }
+        &_box:nth-child(2n) {
+            background-color: #DDDDDD;
+            .word {
+                margin-right: 80px;
+            }
+        }
+    }
+}
+
+// oem_i
+.oem_i_info {
+    text-align: center;
+    h1 {
+        font-size: 60px;
+        font-weight: bolder;
+        color: $green;
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+    p {
+        width: 1000px;
+        margin: 0 auto;
+        line-height: 32px;
+        font-size: 22px;
+        color: $black;
+        padding-bottom: 60px;
+    }
+    .owl-carousel {
+        position: relative;
+        padding-bottom: 150px;
+        .item {
+            margin: 0 auto;
+            width: 1200px;
+        }
+        .owl-prev {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            span {
+                font-size: 50px;
+            }
+        }
+        .owl-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+            span {
+                font-size: 50px;
+            }
+        }
+        .owl-dots {
+            .owl-dot {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: $black;
+                margin: 0 10px;
+            }
+            .active {
+                background-color: $green;
+            }
+        }
+
+    }
+    .title {
+        font-size: 45px;
+        font-weight: bolder;
+        @include title_type(80px, 30%)
+    }
+    .processing {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 60px;
+        padding-bottom: 150px;
+        .box {
+            width: 330px;
+            height: 70px;
+            background-color: $white;
+            font-size: 22px;
+            line-height: 70px;
+            text-align: center;
+        }
+    }
+    .application {
+        width: 1400px;
+        padding-top: 60px;
+        padding-bottom: 150px;
+        display: flex;
+        justify-content: center;
+        .box {
+            margin: 0 100px;
+            .logo {
+                position: relative;
+                min-width: 135px;
+                height: 135px;
+                border: 1px solid $black;
+                border-radius: 50%;
+                img {
+                    position: absolute;
+                    top: 50%;
+                    left: 50px;
+                    transform: translate(-25%, -50%);
+                }
+            }
+            p {
+                width: 135px;
+                padding-top: 24px;
+                font-weight: bold;
+            }
+        }
+    }
+    .successful {
+        width: 1400px;
+        padding-top: 60px;
+        padding-bottom: 150px;
+        display: flex;
+        a {
+            img {
+                width: 465px;
+                height: 350px;
+            }
+        }
+        p {
+            padding-top: 28px;
+            padding-bottom: 20px;
+            width: 465px;
+            font-size: 22px;
+            a {
+                padding-left: 20px;
+                color: $green
+            }
+        }
+        h3 {
+            font-size: 26px;
+            font-weight: bold;
+        }
+    }
+    .back_btn {
+        padding-bottom: 150px;
+        .btn {
+            margin: 0 auto;
+            @include btn($green, $white, 18px);
+            width: 560px;
+            height: 60px;
+            div {
+                top: 20px;
+                left: 200px;
+            }
+        }
+    }
+}

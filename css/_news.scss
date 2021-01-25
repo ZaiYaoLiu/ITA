@@ -1,0 +1,149 @@
+// news
+.news_nav {
+    display: flex;
+    justify-content: center;
+    background-color: $white;
+    a {
+        margin: 0 30px;
+        display: inline-block;
+        position: relative;
+        font-size: 18px;
+        line-height: 74px;
+        color: $black;
+        font-weight: bold;
+        &:nth-child(n+2)::before {
+            position: absolute;
+            content: ".";
+            left: -30px;
+            top: -4px;
+        }
+        &:hover {
+            color: $green;
+        }
+    }
+    .active {
+        color: $green;
+    }
+}
+.news_info {
+    text-align: center;
+    h1 {
+        font-size: 60px;
+        font-weight: bolder;
+        color: $green;
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+    p {
+        width: 1000px;
+        margin: 0 auto;
+        line-height: 32px;
+        font-size: 22px;
+        color: $black;
+        padding-bottom: 60px;
+    }
+    .news_group {
+        width: 1400px;
+        padding-bottom: 70px;
+        display: flex;
+        flex-wrap: wrap;
+        .box {
+            margin-bottom: 80px;
+            a {
+                display: block;
+                overflow: hidden;
+                img {
+                    width: 465px;
+                    height: 350px;
+                }
+            }
+            p {
+                display: flex;
+                justify-content: center;
+                padding-top: 28px;
+                padding-bottom: 20px;
+                width: 465px;
+                font-size: 22px;
+                a {
+                    padding-left: 20px;
+                    color: $green
+                }
+            }
+            h3 {
+                a {
+                    font-size: 26px;
+                    font-weight: bold;
+                    color: $black;
+                }
+            }
+            &:hover {
+                img {
+                    transform:scale(1.2, 1.2);
+                    transition: all 1s ease-out;
+                }
+                h3 {
+                    a {
+                        color: $green;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// naws_i
+.naws_i_info {
+    text-align: center;
+    .breadcrumb {
+        ul {
+            display: flex;
+            li {
+                padding: 12px 0;
+                a {
+                    color: $black;
+                    font-size: 16px;
+                }
+                &:nth-child(n+2)::before {
+                    content: ">";
+                    margin: 0 12px;
+                    color: $black;
+                }
+            }
+        }
+    }
+    h1 {
+        width: 1400px;
+        margin: 0 auto;
+        font-size: 45px;
+        font-weight: bolder;
+        padding-top: 100px;
+        padding-bottom: 60px;
+    }
+    h2 {
+        font-size: 18px;
+        color: $green;
+        padding-bottom: 50px;
+    }
+    p {
+        width: 1000px;
+        margin: 0 auto;
+        line-height: 38px;
+        font-size: 22px;
+        color: $black;
+        padding-top: 80px;
+        padding-bottom: 100px;
+    }
+    .send_btn {
+        padding-bottom: 150px;
+        .btn {
+            margin: 0 auto;
+            @include btn($green, $white, 18px);
+            width: 560px;  //按鈕寬度
+            height: 60px;  //按鈕高度
+            div {
+                top: 20px;  //內容高距離
+                left: 200px;  //內容左距離
+            }
+        }
+    }
+}

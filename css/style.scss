@@ -1,0 +1,266 @@
+$black: #1f1f1f;
+$green: #00802f;
+$yellow: #ffec00;
+$deep_green: #0a5836;
+$red: #b40019;
+$deep_gray: #8e8e8f;
+$gray: #bdbebf;
+$white: #ffffff;
+$bgcolor: #F4F4F4;
+
+
+
+
+// 三角形 向右
+@mixin triangle($color, $size) {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: $size 0 $size $size*2;
+    border-color: transparent transparent transparent $color;
+    transition: 0.5S;
+    padding-left: 20px;
+    &:hover {
+        margin-left: 10px;
+        padding-left: 10px;
+        transition: 0.5S;
+    }
+}
+/*
+按鈕模組
+<a href="">
+    <div class="btn">
+        <div></div>
+        <span>內容</span>
+    </div>
+</a>
+
+CSS 寫法
+.btn {
+    @include btn(字體顏色, 背景顏色, 字體大小);
+    width: ;  //按鈕寬度
+    height: ;  //按鈕高度
+    div {
+        top: ;  //內容高距離
+        left: ;  //內容左距離
+    }
+}
+*/
+@mixin btn($color, $bgcolor, $fnsize) {
+    border: 1px solid $color;
+    position: relative;
+    background-color: $bgcolor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    div {
+        position: absolute;
+        font-size: $fnsize;
+        @include triangle($color, ($fnsize/2));
+    }
+    span {
+        padding-left: 20px;
+        color: $color;
+        font-weight: bold;
+        }
+    &:hover {
+        background-color: $color;
+        color: $bgcolor;
+        div {
+            @include triangle($bgcolor, ($fnsize/2));
+
+        }
+        span {
+            color: $white;
+        }
+    }
+}
+
+// 主題文字符號
+@mixin title_type($line, $position) {
+    position: relative;
+    &::before {
+        position: absolute;
+        content: "";
+        height: 15px;
+        width: 15px;
+        background-color: $black;
+        transform:rotate(45deg) translateX(-50%);
+        left: $position - 3%;
+        top: 50%;
+    }
+    &::after {
+        position: absolute;
+        content: "";
+        height: 15px;
+        width: 15px;
+        background-color: $black;
+        transform:rotate(45deg) translateX(-50%);
+        right: $position - 3%;
+        top: 50%;
+    }
+    span {
+        &::before {
+            position: absolute;
+            content: "";
+            height: 3px;
+            width: $line;
+            background-color: $black;
+            left: $position;
+            top: 50%;
+            transform: translateX(-50%);
+        }
+        &::after {
+            position: absolute;
+            content: "";
+            height: 3px;
+            width: $line;
+            background-color: $black;
+            right: $position - 5%;
+            top: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+@import 'header';
+@import 'footer';
+@import 'index';
+@import 'about';
+@import 'brand';
+@import 'philosophy';
+@import 'equipment';
+@import 'service';
+@import 'oem';
+@import 'products';
+@import 'certification';
+@import 'news';
+@import 'faq';
+@import 'contact';
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+    line-height: 1;
+    font-family: "Lato", 'Microsoft JhengHei', sans-serif;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a {
+    text-decoration:none;
+}
+
+.scale {
+    transform:scale(1.2, 1.2);
+    transition: all 1s ease-out;
+}
+input, textarea, select {
+    border: none;
+    outline: none;
+}
+
+.web {
+    display: block;
+}
+.mobile {
+    display: none;
+}
+.view_url {
+    .view {
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+        padding-left: 20px;
+        a {
+            color: $green;
+        }
+        @include triangle($green, 10px);
+    }
+}
+
+// main
+.main {
+    width: 100vw;
+    background-color: $bgcolor;
+    .content {
+        margin: 0 11.5vw;
+    }
+}
+
+// banner
+.banner {
+    background-image: url('https://via.placeholder.com/1920x385');
+    .content {
+        margin: 0 11.5vw;
+        h1 {
+            font-size: 90px;
+            font-weight: bolder;
+            text-align: center;
+            padding-top: 130px;
+            padding-bottom: 150px;
+        }
+        .breadcrumb {
+            ul {
+                display: flex;
+                li {
+                    padding: 12px 0;
+                    a {
+                        color: $white;
+                        font-size: 16px;
+                    }
+                    &:nth-child(1) {
+                        border-bottom: 5px solid $yellow;
+                    }
+                    &:nth-child(n+2)::before {
+                        content: ">";
+                        margin: 0 12px;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}

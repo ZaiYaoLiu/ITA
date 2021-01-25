@@ -1,0 +1,160 @@
+// contact
+.contact_info {
+    text-align: center;
+    h1 {
+        font-size: 60px;
+        font-weight: bolder;
+        color: $green;
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+    p {
+        width: 1000px;
+        margin: 0 auto;
+        line-height: 32px;
+        font-size: 22px;
+        color: $black;
+        padding-bottom: 60px;
+    }
+    .contact_form {
+        .group {
+            margin-bottom: 60px;
+            &_title {
+                display: flex;
+                font-size: 22px;
+                color: $white;
+                font-weight: bold;
+                .name {
+                    display: flex;
+                    align-items: center;
+                    padding-left: 40px;
+                    width: 1240px;
+                    height: 60px;
+                    background-color: $green;
+                    margin-right: 5px;
+                }
+                .delete {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 155px;
+                    height: 60px;
+                    background-color: $green;
+                }
+            }
+            &_pd {
+                display: flex;
+                font-size: 22px;
+                color: $white;
+                .name {
+                    display: flex;
+                    align-items: center;
+                    padding-left: 40px;
+                    width: 1240px;
+                    height: 60px;
+                    color: $black;
+                    background-color: $white;
+                    margin-right: 5px;
+                }
+                .delete {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 155px;
+                    height: 60px;
+                    background-color: $white;
+                }
+            }
+        }
+        .input_group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding-bottom: 100px;
+            .item {
+                width: 45%;
+                display: flex;
+                justify-content: space-between;
+                margin-top: 20px;
+                position: relative;
+                label {
+                    display: flex;
+                    align-items: center;
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+                select {
+                    width: 425px;
+                    height: 55px;
+                }
+                input {
+                    right: 0;
+                    font-size: 20px;
+                    width: 420px;
+                    height: 55px;
+                }
+                .check {
+                    width: 420px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    input {
+                        border: none;
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+            }
+            .area_item {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                margin-top: 20px;
+                label {
+                    display: flex;
+                    align-items: center;
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+                textarea {
+                    width: 1190px;
+                    height: 140px;
+                }
+            }
+            .security_item {
+                width: 45%;
+                display: flex;
+                justify-content: space-between;
+                margin-top: 20px;
+                label {
+                    display: flex;
+                    align-items: center;
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+                input {
+                    width: 200px;
+                    height: 55px;
+                }
+                .security {
+                    width: 130px;
+                    height: 50px;
+                    background-color: $white;
+                }
+            }
+        }
+        .send_btn {
+            padding-bottom: 150px;
+            .btn {
+                margin: 0 auto;
+                @include btn($green, $white, 18px);
+                width: 560px;  //按鈕寬度
+                height: 60px;  //按鈕高度
+                div {
+                    top: 20px;  //內容高距離
+                    left: 235px;  //內容左距離
+                }
+            }
+        }
+    }
+}

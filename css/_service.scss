@@ -1,0 +1,46 @@
+// service
+.service_info {
+    text-align: center;
+    h1 {
+        font-size: 60px;
+        font-weight: bolder;
+        color: $green;
+        padding-top: 100px;
+        padding-bottom: 60px;
+    }
+    .ser_group {
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 150px;
+        .ser_box {
+            width: 335px;
+            height: 575px;
+            background-color: $white;
+            font-size: 22px;
+            margin: 8px 6px;
+            &_info {
+                padding: 40px 20px;
+                div {
+                    font-style: italic;
+                }
+                .number {
+                    padding-top: 10px;
+                    font-size: 54px;
+                    padding-bottom: 16px;
+                    font-weight: bolder;
+                }
+                h2 {
+                    font-size: 30px;
+                    font-weight: bold;
+                    line-height: 38px;
+                    color: $black;
+                    padding-top: 36px;
+                    padding-bottom: 30px;
+                }
+                p {
+                    line-height: 32px;
+                }
+            }
+        }
+    }
+}

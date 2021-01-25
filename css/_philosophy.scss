@@ -1,0 +1,149 @@
+// philosophy
+.philosophy_info {
+    text-align: center;
+    h1 {
+        font-size: 60px;
+        font-weight: bolder;
+        color: $green;
+        padding-top: 100px;
+    }
+    p {
+        width: 1000px;
+        margin: 0 auto;
+        font-size: 22px;
+        color: $black;
+        padding-top: 50px;
+        padding-bottom: 70px;
+    }
+    .box {
+        margin: 20px auto;
+        width: 910px;
+        height: 135px;
+        background-color: $white;
+        &_info {
+            padding: 20px 75px;
+            display: flex;
+            &_title {
+                color: $green;
+                font-size: 22px;
+                font-weight: bolder;
+                font-style: italic;
+                border-right: 1px solid $green;
+                padding-right: 50px;
+                .word {
+                    align-items: center;
+                }
+                .number {
+                    padding-top: 10px;
+                    font-size: 54px;
+                }
+            }
+            .info {
+                margin-left: 50px;
+                display: flex;
+                align-items: center;
+                text-align: left;
+                font-size: 28px;
+                font-weight: bold;
+            }
+        }
+    }
+    .title {
+        font-size: 45px;
+        font-weight: bolder;
+        margin-top: 150px;
+        margin-bottom: 60px;
+        @include title_type(80px, 38%);
+    }
+    .advantage {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        &_box {
+            width: 45%;
+            display: flex;
+            padding-bottom: 60px;
+            .logo {
+                position: relative;
+                min-width: 135px;
+                height: 135px;
+                border: 1px solid $black;
+                border-radius: 50%;
+                margin-right: 50px;
+                img {
+                    position: absolute;
+                    top: 50%;
+                    left: 50px;
+                    transform: translate(-25%, -50%);
+                }
+            }
+            .info {
+                font-size: 22px;
+                text-align: left;
+                line-height: 32px;
+                &_title {
+                    font-size: 30px;
+                    font-weight: bold;
+                    padding-bottom: 20px;
+                }
+            }
+        }
+    }
+    .vision {
+        padding-bottom: 150px;
+        .vision_box {
+            width: 1400px;
+            height: 530px;
+            background-image: url('https://via.placeholder.com/1400x530');
+            overflow: hidden;
+            margin-bottom: 24px;
+            &_info {
+                position: relative;
+                width: 700px;
+                height: 800px;
+                background-color: $deep_green;
+                transform: rotate(-15deg);
+                margin-top: -80px;
+                margin-left: -100px;
+                .word {
+                    position: absolute;
+                    transform: rotate(15deg);
+                    font-size: 50px;
+                    line-height: 60px;
+                    font-weight: bold;
+                    text-align: left;
+                    top: 25%;
+                    left: 25%;
+                    color: $white;
+                    &_title {
+                        font-size: 26px;
+                        padding-bottom: 40px;
+                    }
+                }
+            }
+            &_info_reverse {
+                position: relative;
+                width: 700px;
+                height: 800px;
+                background-color: $deep_green;
+                transform: rotate(15deg);
+                margin-top: -80px;
+                margin-left: 55%;
+                .word {
+                    position: absolute;
+                    transform: rotate(-15deg);
+                    font-size: 50px;
+                    font-weight: bold;
+                    text-align: left;
+                    top: 25%;
+                    left: 10%;
+                    color: $white;
+                    &_title {
+                        font-size: 26px;
+                        padding-bottom: 40px;
+                    }
+                }
+            }
+        }
+    }
+}

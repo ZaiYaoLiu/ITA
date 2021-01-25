@@ -1,0 +1,406 @@
+// index.php
+.index_banner {
+    overflow: hidden;
+    width: 100%;
+    height: 830px;
+    display: flex;
+    .trans {
+        position: relative;
+        transform: rotate(9deg);
+        border: 5px solid $white;
+        overflow: hidden;
+        height: 1500px;
+        margin-top: -200px;
+        margin-right: -150px;
+        margin-left: -200px;
+        z-index: 999;
+        transition: 0.5s;
+        .img_left {
+            transform: rotate(-9deg);
+            background-image: url('http://demo.pola-cloud.com.tw/ita/webtest/layout/images/Group 1016@2x.jpg ');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            width: 1500px;
+            height: 1000px;
+            .info {
+                position: absolute;
+                top: 460px;
+                left: 400px;
+                width: 640px;
+                height: 250px;
+                color: $white;
+                h1 {
+                    font-size: 70px;
+                    font-weight: bolder;
+                }
+
+                p {
+                    padding-top: 30px;
+                    padding-bottom: 55px;
+                    font-size: 26px;
+                    font-weight: bold;
+                }
+                .explore_url {
+                    margin-left: 10px;
+                    .explore {
+                        display: flex;
+                        align-items: center;
+                        margin-top: 30px;
+                        a {
+                            color: $yellow;
+                        }
+                        @include triangle($yellow, 10px);
+                    }
+                }
+            }
+        }
+        &:hover {
+            transform:scale(1.1, 1.1) rotate(9deg);
+            transition: all 0.5s ease-out;
+            .img_left {
+                background-image: url('http://demo.pola-cloud.com.tw/ita/webtest/layout/images/Group 1017@2x.jpg');
+            }
+        }
+    }
+    .img_right {
+        position: relative;
+        background-image: url('http://demo.pola-cloud.com.tw/ita/webtest/layout/images/Group 1018@2x.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        width: 1500px;
+        height: 900px;
+        transition: 0.5s;
+        .info {
+            position: absolute;
+            top: 290px;
+            left: 375px;
+            width: 640px;
+            height: 250px;
+            color: $white;
+            h1 {
+                font-size: 70px;
+                font-weight: bolder;
+            }
+
+            p {
+                padding-top: 30px;
+                padding-bottom: 55px;
+                font-size: 26px;
+                font-weight: bold;
+            }
+            .explore_url {
+                .explore {
+                    display: flex;
+                    align-items: center;
+                    margin-top: 30px;
+                    padding-left: 20px;
+                    a {
+                        color: $yellow;
+                    }
+                    @include triangle($yellow, 10px);
+                }
+            }
+        }
+        &:hover {
+            transform:scale(1.1, 1.1);
+            transition: all 0.5s ease-out;
+            // margin-left: 100px;
+            background-image: url('http://demo.pola-cloud.com.tw/ita/webtest/layout/images/Group 1019@2x.jpg');
+        }
+    }
+}
+.index_info {
+    text-align: center;
+    h1 {
+        font-size: 60px;
+        font-weight: bolder;
+        color: $black;
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+    p {
+        width: 1000px;
+        margin: 0 auto;
+        line-height: 32px;
+        font-size: 22px;
+        color: $black;
+        padding-bottom: 60px;
+    }
+    .group {
+        padding-bottom: 150px;
+        &_box {
+            width: 100%;
+            .group_info {
+                padding: 70px 80px;
+                display: flex;
+                .image {
+                    overflow: hidden;
+                }
+                .word {
+                    .title {
+                        display: flex;
+                        border-top: 1px solid $gray;
+                        border-bottom: 1px solid $gray;
+                        img {
+                            width: 50px;
+                            height: 70px;
+                            margin-right: 40px;
+                            padding: 20px;
+                        }
+                        h2 {
+                            font-size: 30px;
+                            font-weight: bold;
+                            color: $black;
+                            display: flex;
+                            align-items: center;
+                        }
+                    }
+                    p {
+                        width: 560px;
+                        text-align: left;
+                        line-height: 32px;
+                        padding-bottom: 65px;
+                        padding-top: 30px;
+                    }
+                    .btn {
+                        @include btn($green, $white, 18px);
+                        width: 560px;
+                        height: 60px;
+                        div {
+                            top: 20px;
+                            left: 235px;
+                        }
+                        &:hover {
+                            .group_info {
+                                div {
+                                    overflow: hidden;
+                                    img {
+                                        transform:scale(1.2, 1.2);
+                                        transition: all 1s ease-out;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &_box:nth-child(2n+1) {
+            background-color: $white;
+            .word {
+                margin-left: 80px;
+            }
+        }
+        &_box:nth-child(2n) {
+            background-color: #DDDDDD;
+            .word {
+                margin-right: 80px;
+            }
+        }
+    }
+    .products_info_sub {
+        display: flex;
+        justify-content: center;
+        border-top: 1px solid $gray;
+        border-bottom: 1px solid $gray;
+        margin-bottom: 50px;
+        a {
+            margin: 0 30px;
+            display: inline-block;
+            position: relative;
+            font-size: 26px;
+            line-height: 74px;
+            color: $black;
+            font-weight: bold;
+            &:nth-child(n+2)::before {
+                position: absolute;
+                content: ".";
+                left: -30px;
+                top: -10px;
+            }
+        }
+        .active {
+            color: $green;
+        }
+    }
+    .pd_group {
+        display: flex;
+        flex-wrap: wrap;
+        &_box {
+            margin: 20px 10px;
+            height: 350px;
+            width: 330px;
+            .image {
+                background-color: $white;
+                overflow: hidden;
+            }
+            .word {
+                height: 70px;
+                font-size: 22px;
+                font-weight: bold;
+                line-height: 70px;
+                background-color: $white;
+                margin-top: 5px;
+                color: $black;
+            }
+            &:hover {
+                .image {
+                    img {
+                        transform:scale(1.2, 1.2);
+                        transition: all 1s ease-out;
+                    }
+                }
+                .word {
+                    color: $green;
+                }
+            }
+        }
+    }
+    .view_url {
+        display: flex;
+        justify-content: center;
+        padding-top: 50px;
+        padding-bottom: 100px;
+    }
+}
+.foot_main {
+    width: 100%;
+    background-color: $white;
+    text-align: center;
+    .content {
+        width: 1400px;
+        margin: 0 auto;
+        h1 {
+            font-size: 60px;
+            font-weight: bolder;
+            color: $black;
+            padding-top: 100px;
+            padding-bottom: 50px;
+        }
+        p {
+            width: 1000px;
+            margin: 0 auto;
+            line-height: 32px;
+            font-size: 22px;
+            color: $black;
+            padding-bottom: 60px;
+        }
+        .view_url {
+            position: relative;
+            .view {
+                position: absolute;
+                right: 0;
+                top: -100px;
+            }
+        }
+        .news_group {
+            width: 1400px;
+            padding-bottom: 70px;
+            display: flex;
+            flex-wrap: wrap;
+            .box {
+                margin-bottom: 80px;
+                a {
+                    display: block;
+                    overflow: hidden;
+                    img {
+                        width: 465px;
+                        height: 350px;
+                    }
+                }
+                p {
+                    display: flex;
+                    justify-content: center;
+                    padding-top: 28px;
+                    padding-bottom: 20px;
+                    width: 465px;
+                    font-size: 22px;
+                    a {
+                        padding-left: 20px;
+                        color: $green
+                    }
+                }
+                h3 {
+                    a {
+                        font-size: 26px;
+                        font-weight: bold;
+                        color: $black;
+                    }
+                }
+                &:hover {
+                    img {
+                        transform:scale(1.2, 1.2);
+                        transition: all 1s ease-out;
+                    }
+                    h3 {
+                        a {
+                            color: $green;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.md_main {
+    width: 100%;
+    background-color: $black;
+    .contnet {
+        width: 1400px;
+        margin: 0 auto;
+        text-align: center;
+        color: $white;
+        h1 {
+            line-height: 70px;
+            font-size: 60px;
+            font-weight: bolder;
+            padding-top: 100px;
+        }
+        h2 {
+            line-height: 40px;
+            font-size: 30px;
+            font-weight: bold;
+            padding-top: 20px;
+            padding-bottom: 50px;
+        }
+        p {
+            width: 1000px;
+            margin: 0 auto;
+            line-height: 32px;
+            font-size: 22px;
+            padding-bottom: 70px;
+        }
+        .manufacturing {
+            display: flex;
+            &_box {
+                width: 280px;
+                p {
+                    width: 280px;
+                    margin-top: 20px;
+                    padding-bottom: 0;
+                }
+                &:nth-child(n+2) {
+                    border-left: 1px solid $white;
+                }
+            }
+        }
+        .explore_url {
+            display: flex;
+            justify-content: center;
+            padding-top: 50px;
+            padding-bottom: 100px;
+            .explore {
+                display: flex;
+                align-items: center;
+                margin-top: 30px;
+                padding-left: 20px;
+                a {
+                    color: $yellow;
+                }
+                @include triangle($yellow, 10px);
+            }
+        }
+    }
+}

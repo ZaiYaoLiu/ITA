@@ -1,0 +1,84 @@
+// brand
+.brand_info {
+    text-align: center;
+    h1 {
+        line-height: 70px;
+        font-size: 60px;
+        font-weight: bolder;
+        color: $green;
+        padding-top: 100px;
+    }
+    h2 {
+        line-height: 40px;
+        font-size: 30px;
+        font-weight: bold;
+        color: $black;
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+    p {
+        width: 1000px;
+        margin: 0 auto;
+        line-height: 32px;
+        font-size: 22px;
+        color: $black;
+        padding-bottom: 70px;
+    }
+    .title {
+        padding-top: 150px;
+        font-size: 45px;
+        font-weight: bolder;
+        padding-bottom: 60px;
+        .type {
+            @include title_type(80px, 38%);
+        }
+        .type2 {
+            @include title_type(80px, 30%);
+        }
+    }
+    .time_line {
+        width: 1000px;
+        margin: 0 auto;
+        padding-bottom: 80px;
+        .item {
+            display: flex;
+            align-items: center;
+            font-size: 22px;
+            border-bottom: 2px solid $deep_gray;
+            .time {
+                font-weight: bold;
+                background-color: $white;
+                line-height: 90px;
+                height: 90px;
+                width: 20%;
+                text-align: center;
+                justify-content: center;
+            }
+            .word {
+                padding-left: 36px;
+            }
+            &:nth-child(1) {
+                border-top: 2px solid $deep_gray;
+            }
+        }
+    }
+    .flex_img {
+        display: flex;
+        justify-content: space-around;
+        p {
+            margin-top: 10px;
+            width: 670px;
+        }
+    }
+    .flex_img_circle {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 150px;
+        div {
+            margin: 0 75px;
+            img {
+                border-radius: 50%;
+            }
+        }
+    }
+}
