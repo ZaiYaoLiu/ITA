@@ -31,4 +31,6 @@
 
     console.log(isMobileDevice())
 	loadCSS('css/style.css')
+	loadCSS('css/base.css')
+    loadCSS('css/setting.css')
 </script>

@@ -2,7 +2,7 @@
 .index_banner {
     overflow: hidden;
     width: 100%;
-    height: 830px;
+    height: 85vh;
     display: flex;
     .trans {
         position: relative;
@@ -228,6 +228,7 @@
     .pd_group {
         display: flex;
         flex-wrap: wrap;
+        margin-bottom: 50px;
         &_box {
             margin: 20px 10px;
             height: 350px;
@@ -261,8 +262,6 @@
     .view_url {
         display: flex;
         justify-content: center;
-        padding-top: 50px;
-        padding-bottom: 100px;
     }
 }
 .foot_main {
@@ -288,12 +287,8 @@
             padding-bottom: 60px;
         }
         .view_url {
-            position: relative;
-            .view {
-                position: absolute;
-                right: 0;
-                top: -100px;
-            }
+            display: flex;
+            justify-content: flex-end;
         }
         .news_group {
             width: 1400px;

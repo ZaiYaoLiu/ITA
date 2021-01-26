@@ -34,7 +34,7 @@
     <div class="main">
         <div class="content">
             <div class="index_info">
-                <h1>OEM/ODM</h1>
+                <h1 class="fs-90 mt-100 mb-50">OEM/ODM</h1>
                 <p>Crafted BBQ Grill by those who knows their philosophy principle. R&D ability help you cost down.</p>
                 <div class="group">
                     <div class="group_box">
@@ -209,9 +209,8 @@
                     </a>
                 </div>
                 <div class="view_url">
-                    <div class="view">
-                        <a href=""><div>VIEWALL</div></a>
-                    </div>
+                    <div class="view"></div>
+                    <a href=""><div>VIEW ALL</div></a>
                 </div>
             </div>
         </div>
@@ -220,9 +219,8 @@
         <div class="content">
             <h1>News</h1>
             <div class="view_url">
-                <div class="view">
-                    <a href=""><div>VIEWALL</div></a>
-                </div>
+                <div class="view"></div>
+                <a href=""><div>VIEW ALL</div></a>
             </div>
             <p>Welcome to watch the latest developments of ITA</p>
             <div class="news_group">

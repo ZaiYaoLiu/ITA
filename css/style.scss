@@ -212,12 +212,17 @@ input, textarea, select {
     .view {
         display: flex;
         align-items: center;
-        margin-top: 30px;
         padding-left: 20px;
-        a {
-            color: $green;
-        }
         @include triangle($green, 10px);
+
+    }
+    a {
+        color: $green;
+    }
+    &:hover .view{
+        margin-left: 10px;
+        padding-left: 10px;
+        transition: 0.5S;
     }
 }
 
@@ -236,11 +241,8 @@ input, textarea, select {
     .content {
         margin: 0 11.5vw;
         h1 {
-            font-size: 90px;
             font-weight: bolder;
             text-align: center;
-            padding-top: 130px;
-            padding-bottom: 150px;
         }
         .breadcrumb {
             ul {
