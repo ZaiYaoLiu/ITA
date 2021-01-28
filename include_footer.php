@@ -48,7 +48,7 @@
                 <p>©ITA Developing Co., Ltd. Corporation.   Designed by <a href="">Polaris</a> | <a href="">PRM-Taiwan</a></p>
             </div>
             <div class="icon">
-                <img src="images/icon_2.png" alt="">
+                <img src="images/logo/icon_2.png" alt="">
             </div>
         </div>
     </div>

@@ -4,23 +4,23 @@
     height: 430px;
     background-color: $bgcolor;
     &_content {
-        width: 1400px;
+        width: 73vw;
         margin: 0 auto;
-        padding: 80px 0;
+        padding: 4.1vw 0;
         display: flex;
         justify-content: space-between;
         .company {
             width: 25%;
             &_name {
                 line-height: 36px;
-                font-size: 30px;
+                font-size: 1.5vw;
                 font-weight: bold;
-                margin-bottom: 20px;
+                margin-bottom: 1vw;
             }
             &_addr {
-                line-height: 28px;
+                line-height: 1.4vw;
                 font-size: 16px;
-                margin-bottom: 20px;
+                margin-bottom: 1vw;
                 a {
                     color: $black;
                     &:hover {
@@ -30,35 +30,35 @@
             }
             &_tel {
                 font-size: 16px;
-                margin-bottom: 20px;
+                margin-bottom: 1vw;
             }
             &_email {
                 font-size: 16px;
-                margin-bottom: 20px;
+                margin-bottom: 1vw;
                 color: $black;
                 a {
                     color: $green;
                 }
             }
             &_contact {
-                @include btn($black, $white, 18px);
-                width: 380px;
-                height: 60px;
+                @include btn($black, $white, 0.9vw);
+                width: 19.8vw;
+                height: 3.1vw;
                 div {
-                    top: 20px;
-                    left: 130px;
+                    top: 1vw;
+                    left: 6.7vw;
                 }
             }
         }
         .company_info {
-            width: 260px;
+            width: 13.5vw;
             a {
-                border-top: 1px solid $black;
+                border-top: 0.05vw solid $black;
                 display: block;
-                font-size: 20px;
+                font-size: 1vw;
                 font-weight: bold;
                 color: $black;
-                padding: 24px 0;
+                padding: 1.25vw 0;
                 &:hover {
                     color: $green;
                 }
@@ -81,12 +81,12 @@
     width: 100%;
     background-color: $black;
     &_content {
-        width: 1400px;
+        width: 73vw;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
-        padding: 12px 0;
-        line-height: 39px;
+        padding: 0.6vw 0;
+        line-height: 2vw;
     }
     .info {
         color: $white;
@@ -97,8 +97,8 @@
     .icon {
         img {
             padding-top: 4px;
-            width: 45px;
-            height: 30px;
+            width: 2.3vw;
+            height: 1.5vw;
         }
     }
 }

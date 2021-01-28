@@ -19,12 +19,12 @@
                 display: flex;
                 li {
                     list-style: none;
-                    margin-right: 50px;
-                    padding: 45px 0;
+                    margin-right: 2.6vw;
+                    padding: 2.3vw 0;
                     a {
                         position: relative;
                         display: block;
-                        font-size: 22px;
+                        font-size: 1.1vw;
                         font-weight: bold;
                         color: $white;
                         img {
@@ -59,8 +59,8 @@
         display: none;
         position: absolute;
         z-index: 9999;
-        margin-top: 45px;
-        border-top: blanchedalmond solid 5px;
+        margin-top: 2.3vw;
+        border-top: blanchedalmond solid 0.3vw;
         background-color: $black;
         color: $white;
         .content {
@@ -68,35 +68,35 @@
             display: flex;
             justify-content: space-between;
             &_left {
-                margin-top: 80px;
+                margin-top: 4.1vw;
                 &_title {
-                    font-size: 50px;
+                    font-size: 2.6vw;
                     font-weight: bold;
                 }
                 &_explore {
                     display: flex;
                     align-items: center;
-                    margin-bottom: 80px;
-                    margin-top: 30px;
-                    padding-left: 20px;
+                    margin-bottom: 4.1vw;
+                    margin-top: 1.5vw;
+                    padding-left: 1vw;
                     a {
                         color: $yellow;
                     }
-                    @include triangle($yellow, 10px);
+                    @include triangle($yellow, 0.5vw);
                 }
             }
             &_right {
                 display: flex;
                 flex-wrap: wrap;
-                margin: 80px 0;
+                margin: 4.1vw 0;
                 a {
                     width: 40%;
-                    border: 1px solid $white;
-                    padding: 20px 40px;
+                    border: 0.05vw solid $white;
+                    padding: 1vw 2vw;
                     .item {
                         display: flex;
                         align-items: center;
-                        font-size: 18px;
+                        font-size: 0.9vw;
                         font-weight: bold;
                         color: $white;
                     }

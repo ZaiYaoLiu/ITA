@@ -1,27 +1,27 @@
 // oem
 .oem_info {
     text-align: center;
-    padding-bottom: 150px;
+    padding-bottom: 7.8vw;
     h1 {
-        font-size: 60px;
+        font-size: 3.1vw;
         font-weight: bolder;
         color: $green;
-        padding-top: 100px;
-        padding-bottom: 50px;
+        padding-top: 5.2vw;
+        padding-bottom: 2.6vw;
     }
     p {
-        width: 1000px;
+        width: 52vw;
         margin: 0 auto;
-        line-height: 32px;
-        font-size: 22px;
+        line-height: 1.6vw;
+        font-size: 1.1vw;
         color: $black;
-        padding-bottom: 60px;
+        padding-bottom: 3.1vw;
     }
     .group {
         &_box {
             width: 100%;
             .group_info {
-                padding: 70px 80px;
+                padding: 3.6vw 4.1vw;
                 display: flex;
                 .image {
                     overflow: hidden;
@@ -29,16 +29,16 @@
                 .word {
                     .title {
                         display: flex;
-                        border-top: 1px solid $gray;
-                        border-bottom: 1px solid $gray;
+                        border-top: 0.05vw solid $gray;
+                        border-bottom: 0.05vw solid $gray;
                         img {
-                            width: 50px;
-                            height: 70px;
-                            margin-right: 40px;
-                            padding: 20px;
+                            width: 2.6vw;
+                            height: 3.6vw;
+                            margin-right: 2vw;
+                            padding: 1vw;
                         }
                         h2 {
-                            font-size: 30px;
+                            font-size: 1.5vw;
                             font-weight: bold;
                             color: $black;
                             display: flex;
@@ -46,19 +46,19 @@
                         }
                     }
                     p {
-                        width: 560px;
+                        width: 29.1vw;
                         text-align: left;
-                        line-height: 32px;
-                        padding-bottom: 65px;
-                        padding-top: 30px;
+                        line-height: 1.6vw;
+                        padding-bottom: 3.3vw;
+                        padding-top: 1.5vw;
                     }
                     .btn {
-                        @include btn($green, $white, 18px);
-                        width: 560px;
-                        height: 60px;
+                        @include btn($green, $white, 0.9vw);
+                        width: 29.1vw;
+                        height: 3.1vw;
                         div {
-                            top: 20px;
-                            left: 235px;
+                            top: 1vw;
+                            left: 12.2vw;
                         }
                         &:hover {
                             .group_info {
@@ -78,13 +78,13 @@
         &_box:nth-child(2n+1) {
             background-color: $white;
             .word {
-                margin-left: 80px;
+                margin-left: 4.1vw;
             }
         }
         &_box:nth-child(2n) {
             background-color: #DDDDDD;
             .word {
-                margin-right: 80px;
+                margin-right: 4.1vw;
             }
         }
     }
@@ -94,23 +94,23 @@
 .oem_i_info {
     text-align: center;
     h1 {
-        font-size: 60px;
+        font-size: 3.1vw;
         font-weight: bolder;
         color: $green;
-        padding-top: 100px;
-        padding-bottom: 50px;
+        padding-top: 5.2vw;
+        padding-bottom: 2.6vw;
     }
     p {
-        width: 1000px;
+        width: 52vw;
         margin: 0 auto;
-        line-height: 32px;
-        font-size: 22px;
+        line-height: 1.6vw;
+        font-size: 1.1vw;
         color: $black;
-        padding-bottom: 60px;
+        padding-bottom: 3.1vw;
     }
     .owl-carousel {
         position: relative;
-        padding-bottom: 150px;
+        padding-bottom: 7.8vw;
         .item {
             margin: 0 auto;
             width: 1200px;
@@ -121,7 +121,7 @@
             transform: translateY(-50%);
             left: 0;
             span {
-                font-size: 50px;
+                font-size: 2.6vw;
             }
         }
         .owl-next {
@@ -130,16 +130,16 @@
             transform: translateY(-50%);
             right: 0;
             span {
-                font-size: 50px;
+                font-size: 2.6vw;
             }
         }
         .owl-dots {
             .owl-dot {
-                width: 10px;
-                height: 10px;
+                width: 0.5vw;
+                height: 0.5vw;
                 border-radius: 50%;
                 background-color: $black;
-                margin: 0 10px;
+                margin: 0 0.5vw;
             }
             .active {
                 background-color: $green;
@@ -148,88 +148,88 @@
 
     }
     .title {
-        font-size: 45px;
+        font-size: 2.3vw;
         font-weight: bolder;
-        @include title_type(80px, 30%)
+        @include title_type(4.1vw, 30%)
     }
     .processing {
         display: flex;
         justify-content: space-between;
-        padding-top: 60px;
-        padding-bottom: 150px;
+        padding-top: 3.1vw;
+        padding-bottom: 7.8vw;
         .box {
-            width: 330px;
-            height: 70px;
+            width: 17.1vw;
+            height: 3.6vw;
             background-color: $white;
-            font-size: 22px;
-            line-height: 70px;
+            font-size: 1.1vw;
+            line-height: 3.6vw;
             text-align: center;
         }
     }
     .application {
-        width: 1400px;
-        padding-top: 60px;
-        padding-bottom: 150px;
+        width: 73vw;
+        padding-top: 3.1vw;
+        padding-bottom: 7.8vw;
         display: flex;
         justify-content: center;
         .box {
-            margin: 0 100px;
+            margin: 0 5.2vw;
             .logo {
                 position: relative;
                 min-width: 135px;
                 height: 135px;
-                border: 1px solid $black;
+                border: 0.05vw solid $black;
                 border-radius: 50%;
                 img {
                     position: absolute;
                     top: 50%;
-                    left: 50px;
+                    left: 2.6vw;
                     transform: translate(-25%, -50%);
                 }
             }
             p {
                 width: 135px;
-                padding-top: 24px;
+                padding-top: 1.25vw;
                 font-weight: bold;
             }
         }
     }
     .successful {
-        width: 1400px;
-        padding-top: 60px;
-        padding-bottom: 150px;
+        width: 73vw;
+        padding-top: 3.1vw;
+        padding-bottom: 7.8vw;
         display: flex;
         a {
             img {
-                width: 465px;
-                height: 350px;
+                width: 24.2vw;
+                height: 18.2vw;
             }
         }
         p {
-            padding-top: 28px;
-            padding-bottom: 20px;
-            width: 465px;
-            font-size: 22px;
+            padding-top: 1.4vw;
+            padding-bottom: 1vw;
+            width: 24.2vw;
+            font-size: 1.1vw;
             a {
-                padding-left: 20px;
+                padding-left: 1vw;
                 color: $green
             }
         }
         h3 {
-            font-size: 26px;
+            font-size: 1.3vw;
             font-weight: bold;
         }
     }
     .back_btn {
-        padding-bottom: 150px;
+        padding-bottom: 7.8vw;
         .btn {
             margin: 0 auto;
-            @include btn($green, $white, 18px);
-            width: 560px;
-            height: 60px;
+            @include btn($green, $white, 0.9vw);
+            width: 29.1vw;
+            height: 3.1vw;
             div {
-                top: 20px;
-                left: 200px;
+                top: 1vw;
+                left: 10.4vw;
             }
         }
     }

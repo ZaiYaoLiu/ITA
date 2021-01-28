@@ -9,12 +9,26 @@
         <div class="content">
             <div class="naws_i_info">
                 <div class="breadcrumb">
-                    <ul>
-                        <li><a href="index.php">Home</a></li>
-                        <li><a href="news.php">News</a></li>
-                        <li><a href="company.php">Company</a></li>
-                        <li><a href="#"> Integrity and quality are always our top guidelines</a></li>
-                    </ul>
+                    <ol itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                        <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                            <a class="item" itemprop="item" href="index.php" title="Home">
+                                <span itemprop="name">Home</span>
+                            </a>
+                            <meta itemprop="position" content="1">
+                        </li>
+                        <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                            <a class="item" itemprop="item" href="news.php" title="News">
+                                <span itemprop="name">News</span>
+                            </a>
+                            <meta itemprop="position" content="2">
+                        </li>
+                        <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                            <a class="item" itemprop="item" href="company.php" title="Company">
+                                <span itemprop="name">Company</span>
+                            </a>
+                            <meta itemprop="position" content="3">
+                        </li>
+                    </ol>
                 </div>
                 <h1>Integrity and quality are always our top guidelines</h1>
                 <h2>2021.01.05   |   share : <a href=""><img src="images/icon_facebook.png" alt=""></a></h2>

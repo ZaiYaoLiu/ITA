@@ -2,38 +2,38 @@
 .equipment_info {
     text-align: center;
     h1 {
-        font-size: 60px;
+        font-size: 3.1vw;
         font-weight: bolder;
         color: $green;
-        padding-top: 100px;
+        padding-top: 5.2vw;
     }
     h2 {
-        font-size: 30px;
+        font-size: 1.5vw;
         font-weight: bold;
         color: $black;
-        padding-top: 50px;
-        padding-bottom: 20px;
+        padding-top: 2.6vw;
+        padding-bottom: 1vw;
     }
     p {
-        width: 1000px;
+        width: 52vw;
         margin: 0 auto;
-        line-height: 32px;
-        font-size: 22px;
+        line-height: 1.6vw;
+        font-size: 1.1vw;
         color: $black;
-        padding-bottom: 50px;
+        padding-bottom: 2.6vw;
     }
     .group {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        padding-bottom: 100px;
+        padding-bottom: 5.2vw;
         &_box {
-            margin-bottom: 50px;
+            margin-bottom: 2.6vw;
             img {
-                margin-bottom: 20px;
+                margin-bottom: 1vw;
             }
             p {
-                width: 440px;
+                width: 22.9vw;
             }
         }
     }

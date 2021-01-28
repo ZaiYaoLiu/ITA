@@ -5,15 +5,30 @@
 </head>
 <body>
     <?php include_once("include_header.php");?>
-    <div class="banner">
+    <div class="banner" style="background-image: url('images/banner/about.png');">
         <div class="content">
             <h1>ABOUT</h1>
             <div class="breadcrumb">
-                <ul>
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="about.php">About</a></li>
-                    <li><a href="brand.php">Brand Story</a></li>
-                </ul>
+                <ol itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                    <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a class="item" itemprop="item" href="index.php" title="Home">
+                            <span itemprop="name">Home</span>
+                        </a>
+                        <meta itemprop="position" content="1">
+                    </li>
+                    <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a class="item" itemprop="item" href="about.php" title="About">
+                            <span itemprop="name">About</span>
+                        </a>
+                        <meta itemprop="position" content="2">
+                    </li>
+                    <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a class="item" itemprop="item" href="brand.php" title="Brand Story">
+                            <span itemprop="name">Brand Story</span>
+                        </a>
+                        <meta itemprop="position" content="3">
+                    </li>
+                </ol>
             </div>
         </div>
     </div>

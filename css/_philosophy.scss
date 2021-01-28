@@ -2,58 +2,58 @@
 .philosophy_info {
     text-align: center;
     h1 {
-        font-size: 60px;
+        font-size: 3.1vw;
         font-weight: bolder;
         color: $green;
-        padding-top: 100px;
+        padding-top: 5.2vw;
     }
     p {
-        width: 1000px;
+        width: 52vw;
         margin: 0 auto;
-        font-size: 22px;
+        font-size: 1.1vw;
         color: $black;
-        padding-top: 50px;
-        padding-bottom: 70px;
+        padding-top: 2.6vw;
+        padding-bottom: 3.6vw;
     }
     .box {
-        margin: 20px auto;
+        margin: 1vw auto;
         width: 910px;
         height: 135px;
         background-color: $white;
         &_info {
-            padding: 20px 75px;
+            padding: 1vw 75px;
             display: flex;
             &_title {
                 color: $green;
-                font-size: 22px;
+                font-size: 1.1vw;
                 font-weight: bolder;
                 font-style: italic;
-                border-right: 1px solid $green;
-                padding-right: 50px;
+                border-right: 0.05vw solid $green;
+                padding-right: 2.6vw;
                 .word {
                     align-items: center;
                 }
                 .number {
-                    padding-top: 10px;
+                    padding-top: 0.5vw;
                     font-size: 54px;
                 }
             }
             .info {
-                margin-left: 50px;
+                margin-left: 2.6vw;
                 display: flex;
                 align-items: center;
                 text-align: left;
-                font-size: 28px;
+                font-size: 1.4vw;
                 font-weight: bold;
             }
         }
     }
     .title {
-        font-size: 45px;
+        font-size: 2.3vw;
         font-weight: bolder;
-        margin-top: 150px;
-        margin-bottom: 60px;
-        @include title_type(80px, 38%);
+        margin-top: 7.8vw;
+        margin-bottom: 3.1vw;
+        @include title_type(4.1vw, 38%);
     }
     .advantage {
         display: flex;
@@ -62,62 +62,62 @@
         &_box {
             width: 45%;
             display: flex;
-            padding-bottom: 60px;
+            padding-bottom: 3.1vw;
             .logo {
                 position: relative;
                 min-width: 135px;
                 height: 135px;
-                border: 1px solid $black;
+                border: 0.05vw solid $black;
                 border-radius: 50%;
-                margin-right: 50px;
+                margin-right: 2.6vw;
                 img {
                     position: absolute;
                     top: 50%;
-                    left: 50px;
+                    left: 2.6vw;
                     transform: translate(-25%, -50%);
                 }
             }
             .info {
-                font-size: 22px;
+                font-size: 1.1vw;
                 text-align: left;
-                line-height: 32px;
+                line-height: 1.6vw;
                 &_title {
-                    font-size: 30px;
+                    font-size: 1.5vw;
                     font-weight: bold;
-                    padding-bottom: 20px;
+                    padding-bottom: 1vw;
                 }
             }
         }
     }
     .vision {
-        padding-bottom: 150px;
+        padding-bottom: 7.8vw;
         .vision_box {
-            width: 1400px;
+            width: 73vw;
             height: 530px;
             background-image: url('https://via.placeholder.com/1400x530');
             overflow: hidden;
-            margin-bottom: 24px;
+            margin-bottom: 1.25vw;
             &_info {
                 position: relative;
                 width: 700px;
                 height: 800px;
                 background-color: $deep_green;
                 transform: rotate(-15deg);
-                margin-top: -80px;
-                margin-left: -100px;
+                margin-top: -4.1vw;
+                margin-left: -5.2vw;
                 .word {
                     position: absolute;
                     transform: rotate(15deg);
-                    font-size: 50px;
-                    line-height: 60px;
+                    font-size: 2.6vw;
+                    line-height: 3.1vw;
                     font-weight: bold;
                     text-align: left;
                     top: 25%;
                     left: 25%;
                     color: $white;
                     &_title {
-                        font-size: 26px;
-                        padding-bottom: 40px;
+                        font-size: 1.3vw;
+                        padding-bottom: 2vw;
                     }
                 }
             }
@@ -127,20 +127,20 @@
                 height: 800px;
                 background-color: $deep_green;
                 transform: rotate(15deg);
-                margin-top: -80px;
+                margin-top: -4.1vw;
                 margin-left: 55%;
                 .word {
                     position: absolute;
                     transform: rotate(-15deg);
-                    font-size: 50px;
+                    font-size: 2.6vw;
                     font-weight: bold;
                     text-align: left;
                     top: 25%;
                     left: 10%;
                     color: $white;
                     &_title {
-                        font-size: 26px;
-                        padding-bottom: 40px;
+                        font-size: 1.3vw;
+                        padding-bottom: 2vw;
                     }
                 }
             }

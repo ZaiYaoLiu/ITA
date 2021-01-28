@@ -1,0 +1,12 @@
+<svg id="_001-refrigerator" data-name="001-refrigerator" xmlns="http://www.w3.org/2000/svg" width="48.215" height="77.144" viewBox="0 0 48.215 77.144">
+  <g id="Group_965" data-name="Group 965" transform="translate(0 33.75)">
+    <g id="Group_964" data-name="Group 964">
+      <path id="Path_239" data-name="Path 239" d="M96,224v33.75a4.826,4.826,0,0,0,4.821,4.821h4.821v2.411a2.411,2.411,0,1,0,4.821,0v-2.411H129.75v2.411a2.411,2.411,0,1,0,4.821,0v-2.411h4.821a4.823,4.823,0,0,0,4.821-4.821V224Zm38.572,16.875a2.411,2.411,0,0,1-4.821,0v-9.643a2.411,2.411,0,0,1,4.821,0Z" transform="translate(-96 -224)" fill="#1a1311"/>
+    </g>
+  </g>
+  <g id="Group_967" data-name="Group 967" transform="translate(0)">
+    <g id="Group_966" data-name="Group 966">
+      <path id="Path_240" data-name="Path 240" d="M139.393,0H100.821A4.829,4.829,0,0,0,96,4.821V28.929h48.215V4.821A4.826,4.826,0,0,0,139.393,0Zm-4.821,21.7a2.411,2.411,0,0,1-4.821,0V12.054a2.411,2.411,0,0,1,4.821,0Z" transform="translate(-96)" fill="#1a1311"/>
+    </g>
+  </g>
+</svg>

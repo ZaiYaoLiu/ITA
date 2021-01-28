@@ -5,7 +5,7 @@
 </head>
 <body>
     <?php include_once("include_header.php");?>
-    <div class="main" style="background-image: url('https://via.placeholder.com/1920x1000');">
+    <div class="main" style="background-image: url('images/banner/about.png');background-color: rgba(0, 0, 0, 0.6);background-blend-mode: multiply;">
         <div class="content">
             <div class="about_info">
                 <h1>ABOUT</h1>

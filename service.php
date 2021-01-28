@@ -10,11 +10,26 @@
         <div class="content">
             <h1>ABOUT</h1>
             <div class="breadcrumb">
-                <ul>
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="about.php">About</a></li>
-                    <li><a href="service.php">Service Process</a></li>
-                </ul>
+                <ol itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                    <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a class="item" itemprop="item" href="index.php" title="Home">
+                            <span itemprop="name">Home</span>
+                        </a>
+                        <meta itemprop="position" content="1">
+                    </li>
+                    <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a class="item" itemprop="item" href="about.php" title="About">
+                            <span itemprop="name">About</span>
+                        </a>
+                        <meta itemprop="position" content="2">
+                    </li>
+                    <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a class="item" itemprop="item" href="service.php" title="Service Process">
+                            <span itemprop="name">Service Process</span>
+                        </a>
+                        <meta itemprop="position" content="3">
+                    </li>
+                </ol>
             </div>
         </div>
     </div>

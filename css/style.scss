@@ -19,10 +19,10 @@ $bgcolor: #F4F4F4;
     border-width: $size 0 $size $size*2;
     border-color: transparent transparent transparent $color;
     transition: 0.5S;
-    padding-left: 20px;
+    padding-left: 1vw;
     &:hover {
-        margin-left: 10px;
-        padding-left: 10px;
+        margin-left: 0.5vw;
+        padding-left: 0.5vw;
         transition: 0.5S;
     }
 }
@@ -47,7 +47,7 @@ CSS 寫法
 }
 */
 @mixin btn($color, $bgcolor, $fnsize) {
-    border: 1px solid $color;
+    border: 0.05vw solid $color;
     position: relative;
     background-color: $bgcolor;
     display: flex;
@@ -59,7 +59,7 @@ CSS 寫法
         @include triangle($color, ($fnsize/2));
     }
     span {
-        padding-left: 20px;
+        padding-left: 1vw;
         color: $color;
         font-weight: bold;
         }
@@ -212,16 +212,16 @@ input, textarea, select {
     .view {
         display: flex;
         align-items: center;
-        padding-left: 20px;
-        @include triangle($green, 10px);
+        padding-left: 1vw;
+        @include triangle($green, 0.5vw);
 
     }
     a {
         color: $green;
     }
     &:hover .view{
-        margin-left: 10px;
-        padding-left: 10px;
+        margin-left: 0.5vw;
+        padding-left: 0.5vw;
         transition: 0.5S;
     }
 }
@@ -230,6 +230,7 @@ input, textarea, select {
 .main {
     width: 100vw;
     background-color: $bgcolor;
+    background-repeat: no-repeat;
     .content {
         margin: 0 11.5vw;
     }
@@ -238,27 +239,36 @@ input, textarea, select {
 // banner
 .banner {
     background-image: url('https://via.placeholder.com/1920x385');
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: multiply;
     .content {
         margin: 0 11.5vw;
         h1 {
+            font-size: 4.7vw;
+            color: #ffffff;
+            padding-top: 6.77vw;
+            padding-bottom: 7.8vw;
+            font-weight: bolder;
             font-weight: bolder;
             text-align: center;
         }
         .breadcrumb {
-            ul {
+            ol {
                 display: flex;
                 li {
-                    padding: 12px 0;
+                    display: flex;
+                    padding: 0.6vw 0;
                     a {
                         color: $white;
                         font-size: 16px;
                     }
                     &:nth-child(1) {
-                        border-bottom: 5px solid $yellow;
+                        border-bottom: 0.3vw solid $yellow;
                     }
                     &:nth-child(n+2)::before {
                         content: ">";
-                        margin: 0 12px;
+                        margin: 0 0.6vw;
                         color: $white;
                     }
                 }

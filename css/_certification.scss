@@ -2,19 +2,19 @@
 .certification_info {
     text-align: center;
     h1 {
-        font-size: 60px;
+        font-size: 3.1vw;
         font-weight: bolder;
         color: $green;
-        padding-top: 100px;
-        padding-bottom: 50px;
+        padding-top: 5.2vw;
+        padding-bottom: 2.6vw;
     }
     p {
-        width: 1000px;
+        width: 52vw;
         margin: 0 auto;
-        line-height: 32px;
-        font-size: 22px;
+        line-height: 1.6vw;
+        font-size: 1.1vw;
         color: $black;
-        padding-bottom: 60px;
+        padding-bottom: 3.1vw;
     }
     .group {
         display: flex;
@@ -46,26 +46,26 @@
         }
         p {
             width: 670px;
-            margin-top: 20px;
-            font-size: 30px;
+            margin-top: 1vw;
+            font-size: 1.5vw;
             font-weight: bold;
         }
     }
     .title {
-        @include title_type(80px, 30%);
-        font-size: 45px;
+        @include title_type(4.1vw, 30%);
+        font-size: 2.3vw;
         font-weight: bold;
-        margin-top: 100px;
-        margin-bottom: 60px;
+        margin-top: 5.2vw;
+        margin-bottom: 3.1vw;
     }
     .other_group {
         display: flex;
         flex-wrap: wrap;
-        padding-bottom: 150px;
+        padding-bottom: 7.8vw;
         .box {
             width: 445px;
             height: 205px;
-            margin: 15px 10px;
+            margin: 15px 0.5vw;
             background-color: $white;
             display: flex;
             justify-content: center;
@@ -96,18 +96,18 @@
                 }
             }
             .info {
-                margin-left: 20px;
+                margin-left: 1vw;
                 h3 {
-                    font-size: 26px;
+                    font-size: 1.3vw;
                     font-weight: bold;
                     text-align: left;
                 }
                 p {
                     text-align: left;
-                    width: 250px;
+                    width: 13vw;
                     line-height: 34px;
-                    font-size: 18px;
-                    padding-top: 20px;
+                    font-size: 0.9vw;
+                    padding-top: 1vw;
                     padding-bottom: 0;
                 }
             }

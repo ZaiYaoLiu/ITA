@@ -9,10 +9,20 @@
         <div class="content">
             <h1>CERTIFICATION</h1>
             <div class="breadcrumb">
-                <ul>
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="certification.php">Certification</a></li>
-                </ul>
+                <ol itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                    <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a class="item" itemprop="item" href="index.php" title="Home">
+                            <span itemprop="name">Home</span>
+                        </a>
+                        <meta itemprop="position" content="1">
+                    </li>
+                    <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a class="item" itemprop="item" href="certification.php" title="Certification">
+                            <span itemprop="name">Certification</span>
+                        </a>
+                        <meta itemprop="position" content="2">
+                    </li>
+                </ol>
             </div>
         </div>
     </div>

@@ -9,11 +9,26 @@
         <div class="content">
             <h1>PRODUCTS</h1>
             <div class="breadcrumb">
-                <ul>
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="products.php">Products</a></li>
-                    <li><a href="oem_i.php">BBQ Grill</a></li>
-                </ul>
+                <ol itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                    <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a class="item" itemprop="item" href="index.php" title="Home">
+                            <span itemprop="name">Home</span>
+                        </a>
+                        <meta itemprop="position" content="1">
+                    </li>
+                    <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a class="item" itemprop="item" href="products.php" title="Products">
+                            <span itemprop="name">Products</span>
+                        </a>
+                        <meta itemprop="position" content="2">
+                    </li>
+                    <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a class="item" itemprop="item" href="oem_i.php" title="BBQ Grill">
+                            <span itemprop="name">BBQ Grill</span>
+                        </a>
+                        <meta itemprop="position" content="3">
+                    </li>
+                </ol>
             </div>
         </div>
     </div>
