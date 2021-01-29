@@ -997,11 +997,32 @@ CSS 寫法
   justify-content: center;
   padding-bottom: 7.8vw;
 }
-.brand_info .flex_img_circle div {
+.brand_info .flex_img_circle .brand_img {
+  position: relative;
+  width: 355px;
+  height: 355px;
   margin: 0 75px;
-}
-.brand_info .flex_img_circle div img {
   border-radius: 50%;
+  background-color: #ffffff;
+}
+.brand_info .flex_img_circle .brand_img_mask {
+  position: absolute;
+  background-color: rgba(0, 128, 47, 0.5);
+  color: #ffffff;
+  font-size: 45px;
+  width: 355px;
+  height: 355px;
+  border-radius: 50%;
+  z-index: 9;
+}
+.brand_info .flex_img_circle .brand_img_mask .word {
+  position: absolute;
+}
+.brand_info .flex_img_circle .brand_img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .philosophy_info {
@@ -2745,7 +2766,6 @@ input, textarea, select {
 }
 
 .banner {
-  background-image: url("https://via.placeholder.com/1920x385");
   background-repeat: no-repeat;
   background-color: rgba(0, 0, 0, 0.6);
   background-blend-mode: multiply;
