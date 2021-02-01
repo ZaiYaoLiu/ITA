@@ -198,26 +198,48 @@
         width: 73vw;
         padding-top: 3.1vw;
         padding-bottom: 7.8vw;
+        margin: 0 auto;
         display: flex;
-        a {
-            img {
-                width: 24.2vw;
-                height: 18.2vw;
-            }
-        }
-        p {
-            padding-top: 1.4vw;
-            padding-bottom: 1vw;
-            width: 24.2vw;
-            font-size: 1.1vw;
+        flex-wrap: wrap;
+        .box {
             a {
-                padding-left: 1vw;
-                color: $green
+                display: block;
+                overflow: hidden;
+                img {
+                    width: 24.2vw;
+                    height: 18.2vw;
+                }
             }
-        }
-        h3 {
-            font-size: 1.3vw;
-            font-weight: bold;
+            p {
+                display: flex;
+                justify-content: center;
+                padding-top: 1.4vw;
+                padding-bottom: 1vw;
+                width: 24.2vw;
+                font-size: 1.1vw;
+                a {
+                    padding-left: 1vw;
+                    color: $green
+                }
+            }
+            h3 {
+                a {
+                    font-size: 1.3vw;
+                    font-weight: bold;
+                    color: $black;
+                }
+            }
+            &:hover {
+                img {
+                    transform:scale(1.2, 1.2);
+                    transition: all 1s ease-out;
+                }
+                h3 {
+                    a {
+                        color: $green;
+                    }
+                }
+            }
         }
     }
     .back_btn {

@@ -94,7 +94,7 @@
         .vision_box {
             width: 73vw;
             height: 530px;
-            background-image: url('https://via.placeholder.com/1400x530');
+            // background-image: url('https://via.placeholder.com/1400x530');
             overflow: hidden;
             margin-bottom: 1.25vw;
             &_info {
@@ -104,7 +104,7 @@
                 background-color: $deep_green;
                 transform: rotate(-15deg);
                 margin-top: -4.1vw;
-                margin-left: -5.2vw;
+                margin-left: -3.2vw;
                 .word {
                     position: absolute;
                     transform: rotate(15deg);
@@ -113,7 +113,7 @@
                     font-weight: bold;
                     text-align: left;
                     top: 25%;
-                    left: 25%;
+                    left: 20%;
                     color: $white;
                     &_title {
                         font-size: 1.3vw;
