@@ -116,3 +116,22 @@
         }
     }
 }
+@media (max-width: 767px) {
+    .web {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
+    .header {
+        background-color: blanchedalmond;
+    }
+}
+@media (max-width: 480px) {
+}
+@media (min-width: 768px) and (max-width: 979px) {
+}
+@media (min-width: 980px) {
+}
+@media (min-width: 1200px) {
+}
