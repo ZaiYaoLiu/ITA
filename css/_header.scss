@@ -1,12 +1,24 @@
 // include_header.php
 .header {
     width: 100%;
+    .mobile {
+        display: none;
+    }
+    @include small-pad-width {
+        .mobile {
+            display: block;
+        }
+        .web {
+            display: none;
+        }
+    }
     .navbar {
         background-color: $green;
         &_content {
             margin: 0 11.5vw;
             display: flex;
             justify-content: space-between;
+            align-items: center;
         }
         &_icon {
             padding: 27px 0;
@@ -47,13 +59,35 @@
                     }
                 }
             }
-
-            .active {
-                color: $yellow;
-            }
         }
     }
     .hide {
+        @include small-pad-width {
+            text-align: center;
+            margin-top: 0;
+            ul {
+                font-size: 20px;
+                line-height: 44px;
+                li {
+                    a {
+                        color: $white;
+                    }
+                }
+            }
+        }
+        @include phone-width {
+            text-align: center;
+            margin-top: 0;
+            ul {
+                font-size: 20px;
+                line-height: 44px;
+                li {
+                    a {
+                        color: $white;
+                    }
+                }
+            }
+        }
         left: 0;
         width: 100%;
         display: none;
@@ -64,6 +98,28 @@
         background-color: $black;
         color: $white;
         .content {
+            @include small-pad-width {
+                flex-wrap: wrap;
+                a {
+                    box-sizing: border-box;
+                    display: block;
+                    font-size: 14px;
+                    border: 0.05vw solid $white;
+                    width: 50%;
+                    color: $white;
+                }
+            }
+            @include phone-width {
+                flex-wrap: wrap;
+                a {
+                    box-sizing: border-box;
+                    display: block;
+                    font-size: 14px;
+                    border: 0.05vw solid $white;
+                    width: 50%;
+                    color: $white;
+                }
+            }
             margin: 0 11.5vw;
             display: flex;
             justify-content: space-between;
@@ -88,6 +144,7 @@
             &_right {
                 display: flex;
                 flex-wrap: wrap;
+                width: 45.8vw;
                 margin: 4.1vw 0;
                 a {
                     width: 40%;
@@ -115,23 +172,8 @@
             }
         }
     }
-}
-@media (max-width: 767px) {
-    .web {
-        display: none;
-    }
-    .mobile {
-        display: block;
-    }
-    .header {
-        background-color: blanchedalmond;
+    .active {
+        color: $yellow;
     }
 }
-@media (max-width: 480px) {
-}
-@media (min-width: 768px) and (max-width: 979px) {
-}
-@media (min-width: 980px) {
-}
-@media (min-width: 1200px) {
-}
+

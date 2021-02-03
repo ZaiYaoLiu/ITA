@@ -10,6 +10,12 @@
         display: flex;
         justify-content: space-between;
         .company {
+            @include small-pad-width {
+                width: 100%;
+            }
+            @include phone-width {
+                width: 100%;
+            }
             width: 25%;
             &_name {
                 line-height: 36px;
@@ -41,6 +47,12 @@
                 }
             }
             &_contact {
+                @include small-pad-width {
+                    display: none;
+                }
+                @include phone-width {
+                    display: none;
+                }
                 @include btn($black, $white, 0.9vw);
                 width: 19.8vw;
                 height: 3.1vw;
@@ -51,6 +63,12 @@
             }
         }
         .company_info {
+            @include small-pad-width {
+                display: none;
+            }
+            @include phone-width {
+                display: none;
+            }
             width: 13.5vw;
             a {
                 border-top: 0.05vw solid $black;

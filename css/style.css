@@ -1,4 +1,6 @@
 @charset "UTF-8";
+/*把變數帶入mixin中，此mixin只就單純把media queries寫到我的mixin中，
+並且使用我上面設立的變數來調動media queries的width*/
 /*
 按鈕模組
 <a href="">
@@ -22,6 +24,17 @@ CSS 寫法
 .header {
   width: 100%;
 }
+.header .mobile {
+  display: none;
+}
+@media all and (min-width: 375px) and (max-width: 767px) {
+  .header .mobile {
+    display: block;
+  }
+  .header .web {
+    display: none;
+  }
+}
 .header .navbar {
   background-color: #00802f;
 }
@@ -29,6 +42,7 @@ CSS 寫法
   margin: 0 11.5vw;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .header .navbar_icon {
   padding: 27px 0;
@@ -69,9 +83,6 @@ CSS 寫法
 .header .navbar_menu ul li:hover .hide {
   display: block;
 }
-.header .navbar_menu .active {
-  color: #ffec00;
-}
 .header .hide {
   left: 0;
   width: 100%;
@@ -83,10 +94,62 @@ CSS 寫法
   background-color: #1f1f1f;
   color: #ffffff;
 }
+@media all and (min-width: 375px) and (max-width: 767px) {
+  .header .hide {
+    text-align: center;
+    margin-top: 0;
+  }
+  .header .hide ul {
+    font-size: 20px;
+    line-height: 44px;
+  }
+  .header .hide ul li a {
+    color: #ffffff;
+  }
+}
+@media all and (max-width: 374px) {
+  .header .hide {
+    text-align: center;
+    margin-top: 0;
+  }
+  .header .hide ul {
+    font-size: 20px;
+    line-height: 44px;
+  }
+  .header .hide ul li a {
+    color: #ffffff;
+  }
+}
 .header .hide .content {
   margin: 0 11.5vw;
   display: flex;
   justify-content: space-between;
+}
+@media all and (min-width: 375px) and (max-width: 767px) {
+  .header .hide .content {
+    flex-wrap: wrap;
+  }
+  .header .hide .content a {
+    box-sizing: border-box;
+    display: block;
+    font-size: 14px;
+    border: 0.05vw solid #ffffff;
+    width: 50%;
+    color: #ffffff;
+  }
+}
+@media all and (max-width: 374px) {
+  .header .hide .content {
+    flex-wrap: wrap;
+  }
+  .header .hide .content a {
+    box-sizing: border-box;
+    display: block;
+    font-size: 14px;
+    border: 0.05vw solid #ffffff;
+    width: 50%;
+    color: #ffffff;
+  }
 }
 .header .hide .content_left {
   margin-top: 4.1vw;
@@ -120,6 +183,7 @@ CSS 寫法
 .header .hide .content_right {
   display: flex;
   flex-wrap: wrap;
+  width: 45.8vw;
   margin: 4.1vw 0;
 }
 .header .hide .content_right a {
@@ -145,20 +209,10 @@ CSS 寫法
   /* 滑入時第一張透明度設0 */
   opacity: 0;
 }
-
-@media (max-width: 767px) {
-  .web {
-    display: none;
-  }
-
-  .mobile {
-    display: block;
-  }
-
-  .header {
-    background-color: blanchedalmond;
-  }
+.header .active {
+  color: #ffec00;
 }
+
 .footer {
   width: 100%;
   height: 430px;
@@ -173,6 +227,16 @@ CSS 寫法
 }
 .footer_content .company {
   width: 25%;
+}
+@media all and (min-width: 375px) and (max-width: 767px) {
+  .footer_content .company {
+    width: 100%;
+  }
+}
+@media all and (max-width: 374px) {
+  .footer_content .company {
+    width: 100%;
+  }
 }
 .footer_content .company_name {
   line-height: 36px;
@@ -212,6 +276,16 @@ CSS 寫法
   justify-content: center;
   width: 19.8vw;
   height: 3.1vw;
+}
+@media all and (min-width: 375px) and (max-width: 767px) {
+  .footer_content .company_contact {
+    display: none;
+  }
+}
+@media all and (max-width: 374px) {
+  .footer_content .company_contact {
+    display: none;
+  }
 }
 .footer_content .company_contact div {
   position: absolute;
@@ -261,6 +335,16 @@ CSS 寫法
 }
 .footer_content .company_info {
   width: 13.5vw;
+}
+@media all and (min-width: 375px) and (max-width: 767px) {
+  .footer_content .company_info {
+    display: none;
+  }
+}
+@media all and (max-width: 374px) {
+  .footer_content .company_info {
+    display: none;
+  }
 }
 .footer_content .company_info a {
   border-top: 0.05vw solid #1f1f1f;
@@ -452,174 +536,12 @@ CSS 寫法
   color: #1f1f1f;
   padding-bottom: 3.1vw;
 }
-.index_info .group {
-  padding-bottom: 7.8vw;
-}
-.index_info .group_box {
-  width: 100%;
-}
-.index_info .group_box .group_info {
-  padding: 3.6vw 4.1vw;
-  display: flex;
-}
-.index_info .group_box .group_info .image {
-  overflow: hidden;
-}
-.index_info .group_box .group_info .word .title {
-  display: flex;
-  border-top: 0.05vw solid #bdbebf;
-  border-bottom: 0.05vw solid #bdbebf;
-}
-.index_info .group_box .group_info .word .title img {
-  width: 2.6vw;
-  height: 3.6vw;
-  margin-right: 2vw;
-  padding: 1vw;
-}
-.index_info .group_box .group_info .word .title h2 {
-  font-size: 1.5vw;
-  font-weight: bold;
-  color: #1f1f1f;
-  display: flex;
-  align-items: center;
-}
-.index_info .group_box .group_info .word p {
-  width: 29.1vw;
-  text-align: left;
-  line-height: 1.6vw;
-  padding-bottom: 3.3vw;
-  padding-top: 1.5vw;
-}
-.index_info .group_box .group_info .word .btn {
-  border: 0.05vw solid #00802f;
-  position: relative;
-  background-color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 29.1vw;
-  height: 3.1vw;
-}
-.index_info .group_box .group_info .word .btn div {
-  position: absolute;
-  font-size: 0.9vw;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0.45vw 0 0.45vw 0.9vw;
-  border-color: transparent transparent transparent #00802f;
-  transition: 0.5S;
-  padding-left: 1vw;
-}
-.index_info .group_box .group_info .word .btn div:hover {
-  margin-left: 0.5vw;
-  padding-left: 0.5vw;
-  transition: 0.5S;
-}
-.index_info .group_box .group_info .word .btn span {
-  padding-left: 1vw;
-  color: #00802f;
-  font-weight: bold;
-}
-.index_info .group_box .group_info .word .btn:hover {
-  background-color: #00802f;
-  color: #ffffff;
-}
-.index_info .group_box .group_info .word .btn:hover div {
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0.45vw 0 0.45vw 0.9vw;
-  border-color: transparent transparent transparent #ffffff;
-  transition: 0.5S;
-  padding-left: 1vw;
-}
-.index_info .group_box .group_info .word .btn:hover div:hover {
-  margin-left: 0.5vw;
-  padding-left: 0.5vw;
-  transition: 0.5S;
-}
-.index_info .group_box .group_info .word .btn:hover span {
-  color: #ffffff;
-}
-.index_info .group_box .group_info .word .btn div {
-  top: 1vw;
-  left: 12.2vw;
-}
-.index_info .group_box .group_info .word .btn:hover .group_info div {
-  overflow: hidden;
-}
-.index_info .group_box .group_info .word .btn:hover .group_info div img {
-  transform: scale(1.2, 1.2);
-  transition: all 1s ease-out;
-}
-.index_info .group_box:nth-child(2n+1) {
-  background-color: #ffffff;
-}
-.index_info .group_box:nth-child(2n+1) .word {
-  margin-left: 4.1vw;
-}
-.index_info .group_box:nth-child(2n) {
-  background-color: #DDDDDD;
-}
-.index_info .group_box:nth-child(2n) .word {
-  margin-right: 4.1vw;
-}
 .index_info .products_info_sub {
-  display: flex;
-  justify-content: center;
-  border-top: 0.05vw solid #bdbebf;
-  border-bottom: 0.05vw solid #bdbebf;
   margin-bottom: 2.6vw;
   margin-top: 2.6vw;
 }
-.index_info .products_info_sub a {
-  margin: 0 1.5vw;
-  display: inline-block;
-  position: relative;
-  font-size: 1.3vw;
-  line-height: 3.8vw;
-  color: #1f1f1f;
-  font-weight: bold;
-}
-.index_info .products_info_sub a:nth-child(n+2)::before {
-  position: absolute;
-  content: ".";
-  left: -1.5vw;
-  top: -0.5vw;
-}
-.index_info .products_info_sub .active {
-  color: #00802f;
-}
 .index_info .pd_group {
-  display: flex;
-  flex-wrap: wrap;
   margin-bottom: 2.6vw;
-}
-.index_info .pd_group_box {
-  margin: 1vw 0.5vw;
-  height: 18.2vw;
-  width: 17.1vw;
-}
-.index_info .pd_group_box .image {
-  background-color: #ffffff;
-  overflow: hidden;
-}
-.index_info .pd_group_box .word {
-  height: 3.6vw;
-  font-size: 1.1vw;
-  font-weight: bold;
-  line-height: 3.6vw;
-  background-color: #ffffff;
-  margin-top: 0.3vw;
-  color: #1f1f1f;
-}
-.index_info .pd_group_box:hover .image img {
-  transform: scale(1.2, 1.2);
-  transition: all 1s ease-out;
-}
-.index_info .pd_group_box:hover .word {
-  color: #00802f;
 }
 .index_info .products_url {
   padding-bottom: 8.3vw;
@@ -656,48 +578,6 @@ CSS 寫法
 .foot_main .content .view_url {
   display: flex;
   justify-content: flex-end;
-}
-.foot_main .content .news_group {
-  width: 73vw;
-  padding-bottom: 3.6vw;
-  display: flex;
-  flex-wrap: wrap;
-}
-.foot_main .content .news_group .box {
-  width: 33.3%;
-  margin-bottom: 4.1vw;
-}
-.foot_main .content .news_group .box a {
-  display: block;
-  overflow: hidden;
-}
-.foot_main .content .news_group .box a img {
-  width: 24.2vw;
-  height: 18.2vw;
-}
-.foot_main .content .news_group .box p {
-  display: flex;
-  justify-content: center;
-  padding-top: 1.4vw;
-  padding-bottom: 1vw;
-  width: 24.2vw;
-  font-size: 1.1vw;
-}
-.foot_main .content .news_group .box p a {
-  padding-left: 1vw;
-  color: #00802f;
-}
-.foot_main .content .news_group .box h3 a {
-  font-size: 1.3vw;
-  font-weight: bold;
-  color: #1f1f1f;
-}
-.foot_main .content .news_group .box:hover img {
-  transform: scale(1.2, 1.2);
-  transition: all 1s ease-out;
-}
-.foot_main .content .news_group .box:hover h3 a {
-  color: #00802f;
 }
 
 .md_main {
@@ -1333,116 +1213,6 @@ CSS 寫法
   color: #1f1f1f;
   padding-bottom: 3.1vw;
 }
-.oem_info .group_box {
-  width: 100%;
-}
-.oem_info .group_box .group_info {
-  padding: 3.6vw 4.1vw;
-  display: flex;
-}
-.oem_info .group_box .group_info .image {
-  overflow: hidden;
-}
-.oem_info .group_box .group_info .word .title {
-  display: flex;
-  border-top: 0.05vw solid #bdbebf;
-  border-bottom: 0.05vw solid #bdbebf;
-}
-.oem_info .group_box .group_info .word .title img {
-  width: 2.6vw;
-  height: 3.6vw;
-  margin-right: 2vw;
-  padding: 1vw;
-}
-.oem_info .group_box .group_info .word .title h2 {
-  font-size: 1.5vw;
-  font-weight: bold;
-  color: #1f1f1f;
-  display: flex;
-  align-items: center;
-}
-.oem_info .group_box .group_info .word p {
-  width: 29.1vw;
-  text-align: left;
-  line-height: 1.6vw;
-  padding-bottom: 3.3vw;
-  padding-top: 1.5vw;
-}
-.oem_info .group_box .group_info .word .btn {
-  border: 0.05vw solid #00802f;
-  position: relative;
-  background-color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 29.1vw;
-  height: 3.1vw;
-}
-.oem_info .group_box .group_info .word .btn div {
-  position: absolute;
-  font-size: 0.9vw;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0.45vw 0 0.45vw 0.9vw;
-  border-color: transparent transparent transparent #00802f;
-  transition: 0.5S;
-  padding-left: 1vw;
-}
-.oem_info .group_box .group_info .word .btn div:hover {
-  margin-left: 0.5vw;
-  padding-left: 0.5vw;
-  transition: 0.5S;
-}
-.oem_info .group_box .group_info .word .btn span {
-  padding-left: 1vw;
-  color: #00802f;
-  font-weight: bold;
-}
-.oem_info .group_box .group_info .word .btn:hover {
-  background-color: #00802f;
-  color: #ffffff;
-}
-.oem_info .group_box .group_info .word .btn:hover div {
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0.45vw 0 0.45vw 0.9vw;
-  border-color: transparent transparent transparent #ffffff;
-  transition: 0.5S;
-  padding-left: 1vw;
-}
-.oem_info .group_box .group_info .word .btn:hover div:hover {
-  margin-left: 0.5vw;
-  padding-left: 0.5vw;
-  transition: 0.5S;
-}
-.oem_info .group_box .group_info .word .btn:hover span {
-  color: #ffffff;
-}
-.oem_info .group_box .group_info .word .btn div {
-  top: 1vw;
-  left: 12.2vw;
-}
-.oem_info .group_box .group_info .word .btn:hover .group_info div {
-  overflow: hidden;
-}
-.oem_info .group_box .group_info .word .btn:hover .group_info div img {
-  transform: scale(1.2, 1.2);
-  transition: all 1s ease-out;
-}
-.oem_info .group_box:nth-child(2n+1) {
-  background-color: #ffffff;
-}
-.oem_info .group_box:nth-child(2n+1) .word {
-  margin-left: 4.1vw;
-}
-.oem_info .group_box:nth-child(2n) {
-  background-color: #DDDDDD;
-}
-.oem_info .group_box:nth-child(2n) .word {
-  margin-right: 4.1vw;
-}
 
 .oem_i_info {
   text-align: center;
@@ -1585,45 +1355,9 @@ CSS 寫法
   padding-top: 1.25vw;
   font-weight: bold;
 }
-.oem_i_info .successful {
-  width: 73vw;
-  padding-top: 3.1vw;
-  padding-bottom: 7.8vw;
+.oem_i_info .news_group {
   margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-}
-.oem_i_info .successful .box a {
-  display: block;
-  overflow: hidden;
-}
-.oem_i_info .successful .box a img {
-  width: 24.2vw;
-  height: 18.2vw;
-}
-.oem_i_info .successful .box p {
-  display: flex;
-  justify-content: center;
-  padding-top: 1.4vw;
-  padding-bottom: 1vw;
-  width: 24.2vw;
-  font-size: 1.1vw;
-}
-.oem_i_info .successful .box p a {
-  padding-left: 1vw;
-  color: #00802f;
-}
-.oem_i_info .successful .box h3 a {
-  font-size: 1.3vw;
-  font-weight: bold;
-  color: #1f1f1f;
-}
-.oem_i_info .successful .box:hover img {
-  transform: scale(1.2, 1.2);
-  transition: all 1s ease-out;
-}
-.oem_i_info .successful .box:hover h3 a {
-  color: #00802f;
+  margin-top: 60px;
 }
 .oem_i_info .back_btn {
   padding-bottom: 7.8vw;
@@ -1732,35 +1466,8 @@ CSS 寫法
   color: #1f1f1f;
   padding-bottom: 3.1vw;
 }
-.products_info .group {
-  display: flex;
-  flex-wrap: wrap;
-  padding-bottom: 7.8vw;
-}
-.products_info .group_box {
-  margin: 1vw 0.5vw;
-  height: 18.2vw;
-  width: 17.1vw;
-}
-.products_info .group_box .image {
-  background-color: #ffffff;
-  overflow: hidden;
-}
-.products_info .group_box .word {
-  height: 3.6vw;
-  font-size: 1.1vw;
-  font-weight: bold;
-  line-height: 3.6vw;
-  background-color: #ffffff;
-  margin-top: 0.3vw;
-  color: #1f1f1f;
-}
-.products_info .group_box:hover .image img {
-  transform: scale(1.2, 1.2);
-  transition: all 1s ease-out;
-}
-.products_info .group_box:hover .word {
-  color: #00802f;
+.products_info .pd_group {
+  padding-bottom: 150px;
 }
 
 .products_i_info {
@@ -2287,48 +1994,6 @@ CSS 寫法
   color: #1f1f1f;
   padding-bottom: 3.1vw;
 }
-.news_info .news_group {
-  width: 73vw;
-  padding-bottom: 3.6vw;
-  display: flex;
-  flex-wrap: wrap;
-}
-.news_info .news_group .box {
-  width: 33.3%;
-  margin-bottom: 4.1vw;
-}
-.news_info .news_group .box a {
-  display: block;
-  overflow: hidden;
-}
-.news_info .news_group .box a img {
-  width: 24.2vw;
-  height: 18.2vw;
-}
-.news_info .news_group .box p {
-  display: flex;
-  justify-content: center;
-  padding-top: 1.4vw;
-  padding-bottom: 1vw;
-  width: 24.2vw;
-  font-size: 1.1vw;
-}
-.news_info .news_group .box p a {
-  padding-left: 1vw;
-  color: #00802f;
-}
-.news_info .news_group .box h3 a {
-  font-size: 1.3vw;
-  font-weight: bold;
-  color: #1f1f1f;
-}
-.news_info .news_group .box:hover img {
-  transform: scale(1.2, 1.2);
-  transition: all 1s ease-out;
-}
-.news_info .news_group .box:hover h3 a {
-  color: #00802f;
-}
 
 .naws_i_info {
   text-align: center;
@@ -2805,6 +2470,10 @@ table {
   border-spacing: 0;
 }
 
+.hidden {
+  display: none;
+}
+
 a {
   text-decoration: none;
 }
@@ -2817,18 +2486,6 @@ a {
 input, textarea, select {
   border: none;
   outline: none;
-}
-
-.hidden {
-  display: none;
-}
-
-.web {
-  display: block;
-}
-
-.mobile {
-  display: none;
 }
 
 .view_url .view {
@@ -2902,6 +2559,193 @@ input, textarea, select {
   content: ">";
   margin: 0 0.6vw;
   color: #ffffff;
+}
+
+.group {
+  padding-bottom: 7.8vw;
+}
+.group_box {
+  width: 100%;
+}
+.group_box .group_info {
+  padding: 3.6vw 4.1vw;
+  display: flex;
+}
+.group_box .group_info .image {
+  overflow: hidden;
+}
+.group_box .group_info .word .title {
+  display: flex;
+  border-top: 0.05vw solid #bdbebf;
+  border-bottom: 0.05vw solid #bdbebf;
+}
+.group_box .group_info .word .title img {
+  width: 2.6vw;
+  height: 3.6vw;
+  margin-right: 2vw;
+  padding: 1vw;
+}
+.group_box .group_info .word .title h2 {
+  font-size: 1.5vw;
+  font-weight: bold;
+  color: #1f1f1f;
+  display: flex;
+  align-items: center;
+}
+.group_box .group_info .word p {
+  width: 29.1vw;
+  text-align: left;
+  line-height: 1.6vw;
+  padding-bottom: 3.3vw;
+  padding-top: 1.5vw;
+}
+.group_box .group_info .word .btn {
+  border: 0.05vw solid #00802f;
+  position: relative;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 29.1vw;
+  height: 3.1vw;
+}
+.group_box .group_info .word .btn div {
+  position: absolute;
+  font-size: 0.9vw;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0.45vw 0 0.45vw 0.9vw;
+  border-color: transparent transparent transparent #00802f;
+  transition: 0.5S;
+  padding-left: 1vw;
+}
+.group_box .group_info .word .btn div:hover {
+  margin-left: 0.5vw;
+  padding-left: 0.5vw;
+  transition: 0.5S;
+}
+.group_box .group_info .word .btn span {
+  padding-left: 1vw;
+  color: #00802f;
+  font-weight: bold;
+}
+.group_box .group_info .word .btn:hover {
+  background-color: #00802f;
+  color: #ffffff;
+}
+.group_box .group_info .word .btn:hover div {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0.45vw 0 0.45vw 0.9vw;
+  border-color: transparent transparent transparent #ffffff;
+  transition: 0.5S;
+  padding-left: 1vw;
+}
+.group_box .group_info .word .btn:hover div:hover {
+  margin-left: 0.5vw;
+  padding-left: 0.5vw;
+  transition: 0.5S;
+}
+.group_box .group_info .word .btn:hover span {
+  color: #ffffff;
+}
+.group_box .group_info .word .btn div {
+  top: 1vw;
+  left: 12.2vw;
+}
+.group_box .group_info .word .btn:hover .group_info div {
+  overflow: hidden;
+}
+.group_box .group_info .word .btn:hover .group_info div img {
+  transform: scale(1.2, 1.2);
+  transition: all 1s ease-out;
+}
+.group_box:nth-child(2n+1) {
+  background-color: #ffffff;
+}
+.group_box:nth-child(2n+1) .word {
+  margin-left: 4.1vw;
+}
+.group_box:nth-child(2n) {
+  background-color: #DDDDDD;
+}
+.group_box:nth-child(2n) .word {
+  margin-right: 4.1vw;
+}
+
+.news_group {
+  width: 73vw;
+  padding-bottom: 3.6vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+.news_group .box {
+  width: 33.3%;
+  margin-bottom: 4.1vw;
+}
+.news_group .box a {
+  display: block;
+  overflow: hidden;
+}
+.news_group .box a img {
+  width: 24.2vw;
+  height: 18.2vw;
+}
+.news_group .box p {
+  display: flex;
+  justify-content: center;
+  padding-top: 1.4vw;
+  padding-bottom: 1vw;
+  width: 24.2vw;
+  font-size: 1.1vw;
+}
+.news_group .box p a {
+  padding-left: 1vw;
+  color: #00802f;
+}
+.news_group .box h3 a {
+  font-size: 1.3vw;
+  font-weight: bold;
+  color: #1f1f1f;
+}
+.news_group .box:hover img {
+  transform: scale(1.2, 1.2);
+  transition: all 1s ease-out;
+}
+.news_group .box:hover h3 a {
+  color: #00802f;
+}
+
+.pd_group {
+  display: flex;
+  flex-wrap: wrap;
+}
+.pd_group_box {
+  margin: 1vw 0.5vw;
+  height: 18.2vw;
+  width: 17.1vw;
+}
+.pd_group_box .image {
+  background-color: #ffffff;
+  overflow: hidden;
+}
+.pd_group_box .word {
+  height: 3.6vw;
+  font-size: 1.1vw;
+  font-weight: bold;
+  line-height: 3.6vw;
+  background-color: #ffffff;
+  margin-top: 0.3vw;
+  color: #1f1f1f;
+}
+.pd_group_box:hover .image img {
+  transform: scale(1.2, 1.2);
+  transition: all 1s ease-out;
+}
+.pd_group_box:hover .word {
+  color: #00802f;
 }
 
 /*# sourceMappingURL=style.css.map */

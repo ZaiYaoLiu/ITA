@@ -42,54 +42,6 @@
         color: $black;
         padding-bottom: 3.1vw;
     }
-    .news_group {
-        width: 73vw;
-        padding-bottom: 3.6vw;
-        display: flex;
-        flex-wrap: wrap;
-        .box {
-            width: 33.3%;
-            margin-bottom: 4.1vw;
-            a {
-                display: block;
-                overflow: hidden;
-                img {
-                    width: 24.2vw;
-                    height: 18.2vw;
-                }
-            }
-            p {
-                display: flex;
-                justify-content: center;
-                padding-top: 1.4vw;
-                padding-bottom: 1vw;
-                width: 24.2vw;
-                font-size: 1.1vw;
-                a {
-                    padding-left: 1vw;
-                    color: $green
-                }
-            }
-            h3 {
-                a {
-                    font-size: 1.3vw;
-                    font-weight: bold;
-                    color: $black;
-                }
-            }
-            &:hover {
-                img {
-                    transform:scale(1.2, 1.2);
-                    transition: all 1s ease-out;
-                }
-                h3 {
-                    a {
-                        color: $green;
-                    }
-                }
-            }
-        }
-    }
 }
 
 // naws_i

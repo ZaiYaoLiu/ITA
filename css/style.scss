@@ -8,7 +8,54 @@ $gray: #bdbebf;
 $white: #ffffff;
 $bgcolor: #F4F4F4;
 
+@mixin mobile {
+    @media (max-width:769px) {
+        @content;
+    }
+}
 
+@mixin web {
+    @media screen {
+        @content;
+    }
+}
+
+//先針對media queries的width設為變數
+
+$pc-media:1440px;
+$pcs-media:1039px;
+$pad-media:768px;
+$pads-media:767px;
+$phone-media:375px;
+$phones-media:374px;
+
+/*把變數帶入mixin中，此mixin只就單純把media queries寫到我的mixin中，
+並且使用我上面設立的變數來調動media queries的width*/
+
+//電腦
+ @mixin pc-width() {
+  @media all and (min-width: $pc-media) {
+               @content;
+         }
+    }
+//平板
+ @mixin pad-width() {
+@media all and (min-width:$pad-media) and (max-width: $pcs-media) {
+                @content;
+          }
+}
+//小平板
+ @mixin small-pad-width() {
+        @media all and (min-width: $phone-media) and (max-width:$pads-media) {
+                @content;
+          }
+ }
+//手機
+ @mixin phone-width() {
+        @media all and (max-width: $phones-media) {
+                @content;
+          }
+ }
 
 
 // 三角形 向右
@@ -188,11 +235,12 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
+.hidden {
+    display: none;
+}
 a {
     text-decoration:none;
 }
-
 .scale {
     transform:scale(1.2, 1.2);
     transition: all 1s ease-out;
@@ -200,16 +248,6 @@ a {
 input, textarea, select {
     border: none;
     outline: none;
-}
-.hidden {
-    display: none;
-}
-
-.web {
-    display: block;
-}
-.mobile {
-    display: none;
 }
 .view_url {
     .view {
@@ -275,6 +313,159 @@ input, textarea, select {
                         color: $white;
                     }
                 }
+            }
+        }
+    }
+}
+.group {
+    padding-bottom: 7.8vw;
+    &_box {
+        width: 100%;
+        .group_info {
+            padding: 3.6vw 4.1vw;
+            display: flex;
+            .image {
+                overflow: hidden;
+            }
+            .word {
+                .title {
+                    display: flex;
+                    border-top: 0.05vw solid $gray;
+                    border-bottom: 0.05vw solid $gray;
+                    img {
+                        width: 2.6vw;
+                        height: 3.6vw;
+                        margin-right: 2vw;
+                        padding: 1vw;
+                    }
+                    h2 {
+                        font-size: 1.5vw;
+                        font-weight: bold;
+                        color: $black;
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+                p {
+                    width: 29.1vw;
+                    text-align: left;
+                    line-height: 1.6vw;
+                    padding-bottom: 3.3vw;
+                    padding-top: 1.5vw;
+                }
+                .btn {
+                    @include btn($green, $white, 0.9vw);
+                    width: 29.1vw;
+                    height: 3.1vw;
+                    div {
+                        top: 1vw;
+                        left: 12.2vw;
+                    }
+                    &:hover {
+                        .group_info {
+                            div {
+                                overflow: hidden;
+                                img {
+                                    transform:scale(1.2, 1.2);
+                                    transition: all 1s ease-out;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &_box:nth-child(2n+1) {
+        background-color: $white;
+        .word {
+            margin-left: 4.1vw;
+        }
+    }
+    &_box:nth-child(2n) {
+        background-color: #DDDDDD;
+        .word {
+            margin-right: 4.1vw;
+        }
+    }
+}
+.news_group {
+    width: 73vw;
+    padding-bottom: 3.6vw;
+    display: flex;
+    flex-wrap: wrap;
+    .box {
+        width: 33.3%;
+        margin-bottom: 4.1vw;
+        a {
+            display: block;
+            overflow: hidden;
+            img {
+                width: 24.2vw;
+                height: 18.2vw;
+            }
+        }
+        p {
+            display: flex;
+            justify-content: center;
+            padding-top: 1.4vw;
+            padding-bottom: 1vw;
+            width: 24.2vw;
+            font-size: 1.1vw;
+            a {
+                padding-left: 1vw;
+                color: $green
+            }
+        }
+        h3 {
+            a {
+                font-size: 1.3vw;
+                font-weight: bold;
+                color: $black;
+            }
+        }
+        &:hover {
+            img {
+                transform:scale(1.2, 1.2);
+                transition: all 1s ease-out;
+            }
+            h3 {
+                a {
+                    color: $green;
+                }
+            }
+        }
+    }
+}
+.pd_group {
+    display: flex;
+    flex-wrap: wrap;
+    &_box {
+        margin: 1vw 0.5vw;
+        height: 18.2vw;
+        width: 17.1vw;
+        .image {
+            background-color: $white;
+            overflow: hidden;
+        }
+        .word {
+            height: 3.6vw;
+            font-size: 1.1vw;
+            font-weight: bold;
+            line-height: 3.6vw;
+            background-color: $white;
+            margin-top: 0.3vw;
+            color: $black;
+        }
+        &:hover {
+            .image {
+                img {
+                    transform:scale(1.2, 1.2);
+                    transition: all 1s ease-out;
+                }
+            }
+            .word {
+                color: $green;
             }
         }
     }

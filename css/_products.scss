@@ -44,61 +44,13 @@
         color: $black;
         padding-bottom: 3.1vw;
     }
-    .group {
-        display: flex;
-        flex-wrap: wrap;
-        padding-bottom: 7.8vw;
-        &_box {
-            margin: 1vw 0.5vw;
-            height: 18.2vw;
-            width: 17.1vw;
-            .image {
-                background-color: $white;
-                overflow: hidden;
-            }
-            .word {
-                height: 3.6vw;
-                font-size: 1.1vw;
-                font-weight: bold;
-                line-height: 3.6vw;
-                background-color: $white;
-                margin-top: 0.3vw;
-                color: $black;
-            }
-            &:hover {
-                .image {
-                    img {
-                        transform:scale(1.2, 1.2);
-                        transition: all 1s ease-out;
-                    }
-                }
-                .word {
-                    color: $green;
-                }
-            }
-        }
+    .pd_group {
+        padding-bottom: 150px;
     }
 }
 // products_i
 .products_i_info {
     text-align: center;
-    // .breadcrumb {
-    //     ul {
-    //         display: flex;
-    //         li {
-    //             padding: 0.6vw 0;
-    //             a {
-    //                 color: $black;
-    //                 font-size: 16px;
-    //             }
-    //             &:nth-child(n+2)::before {
-    //                 content: ">";
-    //                 margin: 0 0.6vw;
-    //                 color: $black;
-    //             }
-    //         }
-    //     }
-    // }
     .breadcrumb {
         ol {
             display: flex;
