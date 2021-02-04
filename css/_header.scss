@@ -12,6 +12,14 @@
             display: none;
         }
     }
+    @include phone-width() {
+        .mobile {
+            display: block;
+        }
+        .web {
+            display: none;
+        }
+    }
     .navbar {
         background-color: $green;
         &_content {
@@ -22,6 +30,18 @@
         }
         &_icon {
             padding: 27px 0;
+            img {
+                width: 4.71vw;
+                height: 3.125vw;
+                @include small-pad-width {
+                    width: 46px;
+                    height: 30px;
+                }
+                @include phone-width() {
+                    width: 46px;
+                    height: 30px;
+                }
+            }
         }
         &_menu {
             display: flex;
@@ -40,6 +60,16 @@
                         font-weight: bold;
                         color: $white;
                         img {
+                            width: 1.823vw;
+                            height: 1.823vw;
+                            @include small-pad-width {
+                                width: 30px;
+                                height: 30px;
+                            }
+                            @include phone-width() {
+                                width: 30px;
+                                height: 30px;
+                            }
                             position:absolute;
                             top: 50%;
                             transform: translateY(-50%);
@@ -65,6 +95,7 @@
         @include small-pad-width {
             text-align: center;
             margin-top: 0;
+            background-color: rgba($color: #000000, $alpha: 0.9);
             ul {
                 font-size: 20px;
                 line-height: 44px;
@@ -78,6 +109,7 @@
         @include phone-width {
             text-align: center;
             margin-top: 0;
+            background-color: rgba($color: #000000, $alpha: 0.9);
             ul {
                 font-size: 20px;
                 line-height: 44px;

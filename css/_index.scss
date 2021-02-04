@@ -1,9 +1,36 @@
 // index.php
+.mobile {
+    display: none;
+}
+@include small-pad-width {
+    .mobile {
+        display: block;
+    }
+    .web {
+        display: none;
+    }
+}
+@include phone-width() {
+    .mobile {
+        display: block;
+    }
+    .web {
+        display: none;
+    }
+}
 .index_banner {
     overflow: hidden;
     width: 100%;
     height: 40vw;
     display: flex;
+    @include small-pad-width {
+        height: auto;
+        display: block;
+    }
+    @include phone-width() {
+        height: auto;
+        display: block;
+    }
     .trans {
         position: relative;
         transform: rotate(9deg);
@@ -15,62 +42,110 @@
         margin-left: -10.4vw;
         z-index: 999;
         transition: 0.5s;
-        .img_left {
-            transform: rotate(-9deg);
-            background-image: url('http://demo.pola-cloud.com.tw/ita/webtest/layout/images/Group 1016@2x.jpg ');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center center;
-            width: 78.1vw;
-            height: 52vw;
-            .info {
-                position: absolute;
-                top: 24vw;
-                left: 20.8vw;
-                width: 33.3vw;
-                height: 13vw;
-                color: $white;
-                .word {
-                    font-size: 3.6vw;
-                    font-weight: bolder;
-                }
-                p {
-                    padding-top: 1.5vw;
-                    padding-bottom: 2.8vw;
-                    font-size: 1.3vw;
-                    font-weight: bold;
-                }
-                .explore_url {
-                    margin-left: 0.5vw;
-                    .explore {
-                        display: flex;
-                        align-items: center;
-                        margin-top: 1.5vw;
-                        a {
-                            color: $yellow;
-                        }
-                        @include triangle($yellow, 0.5vw);
-                    }
-                }
-            }
-        }
         &:hover {
             transform:scale(1.1, 1.1) rotate(9deg);
             transition: all 0.5s ease-out;
             .img_left {
-                background-image: url('http://demo.pola-cloud.com.tw/ita/webtest/layout/images/Group 1017@2x.jpg');
+                background-image: url('../images/banner/Group\ 1017.jpg');
             }
         }
     }
+    .img_left {
+        transform: rotate(-9deg);
+        background-image: url('../images/banner/Group\ 1016.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        width: 78.1vw;
+        height: 52vw;
+        @include small-pad-width {
+            transform: rotate(0);
+            width: 100vw;
+            height: 300px;
+        }
+        @include phone-width() {
+            transform: rotate(0);
+            width: 100vw;
+            height: 300px;
+        }
+        .content {
+            margin: 0 11.5vw;
+        }
+        .info {
+            position: absolute;
+            top: 24vw;
+            left: 20.8vw;
+            width: 33.3vw;
+            height: 13vw;
+            color: $white;
+        }
+        .word {
+            color: $white;
+            font-size: 3.6vw;
+            font-weight: bolder;
+            @include small-pad-width {
+                padding: 30px 0;
+                font-size: 36px;
+                line-height: 46px;
+            }
+            @include phone-width() {
+                padding: 30px 0;
+                font-size: 36px;
+                line-height: 46px;
+            }
+        }
+        p {
+            padding-top: 1.5vw;
+            padding-bottom: 2.8vw;
+            font-size: 1.3vw;
+            font-weight: bold;
+        }
+        .explore_url {
+            margin-left: 0.5vw;
+            .explore {
+                display: flex;
+                align-items: center;
+                margin-top: 1.5vw;
+                a {
+                    color: $yellow;
+                }
+                @include triangle($yellow, 0.5vw);
+            }
+        }
+        &:hover {
+            @include small-pad-width {
+                transform:scale(1.1, 1.1);
+                transition: all 0.5s ease-out;
+                background-image: url('../images/banner/Group\ 1017.jpg');
+            }
+            @include phone-width {
+                transform:scale(1.1, 1.1);
+                transition: all 0.5s ease-out;
+                background-image: url('../images/banner/Group\ 1017.jpg');
+            }
+        }
+    }
+
     .img_right {
         position: relative;
-        background-image: url('http://demo.pola-cloud.com.tw/ita/webtest/layout/images/Group 1018@2x.jpg');
+        background-image: url('../images/banner/Group\ 1018.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
         width: 78.1vw;
         height: 46.8vw;
         transition: 0.5s;
+        @include small-pad-width {
+            width: 100vw;
+            height: 300px;
+        }
+        @include phone-width() {
+            width: 100vw;
+            height: 300px;
+        }
+        .content {
+            margin: 0 11.5vw;
+        }
         .info {
             position: absolute;
             top: 15.1vw;
@@ -78,38 +153,54 @@
             width: 33.3vw;
             height: 13vw;
             color: $white;
-            .word {
-                font-size: 3.6vw;
-                font-weight: bolder;
+        }
+        .word {
+            color: $white;
+            font-size: 3.6vw;
+            font-weight: bolder;
+            @include small-pad-width {
+                padding: 30px 0;
+                font-size: 36px;
+                line-height: 46px;
             }
-            p {
-                padding-top: 1.5vw;
-                padding-bottom: 2.8vw;
-                font-size: 1.3vw;
-                font-weight: bold;
+            @include phone-width() {
+                padding: 30px 0;
+                font-size: 36px;
+                line-height: 46px;
             }
-            .explore_url {
-                .explore {
-                    display: flex;
-                    align-items: center;
-                    margin-top: 1.5vw;
-                    padding-left: 1vw;
-                    a {
-                        color: $yellow;
-                    }
-                    @include triangle($yellow, 0.5vw);
+        }
+        p {
+            padding-top: 1.5vw;
+            padding-bottom: 2.8vw;
+            font-size: 1.3vw;
+            font-weight: bold;
+        }
+        .explore_url {
+            margin-left: 0.5vw;
+            .explore {
+                display: flex;
+                align-items: center;
+                margin-top: 1.5vw;
+                a {
+                    color: $yellow;
                 }
+                @include triangle($yellow, 0.5vw);
             }
         }
         &:hover {
             transform:scale(1.1, 1.1);
             transition: all 0.5s ease-out;
-            // margin-left: 5.2vw;
-            background-image: url('http://demo.pola-cloud.com.tw/ita/webtest/layout/images/Group 1019@2x.jpg');
+            background-image: url('../images/banner/Group\ 1019.jpg');
         }
     }
 }
 .group_title {
+    @include small-pad-width {
+        font-size: 26px;
+    }
+    @include phone-width {
+        font-size: 26px;
+    }
     font-size: 3.1vw;
     font-weight: bolder;
     padding-top: 5.7vw;
@@ -117,6 +208,16 @@
 .index_info {
     text-align: center;
     p {
+        @include small-pad-width {
+            font-size: 14px;
+            line-height: 24px;
+            width: 100%;
+        }
+        @include phone-width {
+            font-size: 14px;
+            line-height: 24px;
+            width: 100%;
+        }
         padding-top: 2.6vw;
         width: 52vw;
         margin: 0 auto;
@@ -138,6 +239,7 @@
     .view_url {
         display: flex;
         justify-content: center;
+        align-items: center;
     }
 }
 .foot_main {
@@ -147,6 +249,7 @@
     .content {
         width: 73vw;
         margin: 0 auto;
+        position: relative;
         h1 {
             font-size: 3.1vw;
             font-weight: bolder;
@@ -161,10 +264,37 @@
             font-size: 1.1vw;
             color: $black;
             padding-bottom: 3.1vw;
+            padding-top: 2.6vw;
+            @include small-pad-width {
+                font-size: 14px;
+                line-height: 24px;
+                width: 100%;
+            }
+            @include phone-width {
+                font-size: 14px;
+                line-height: 24px;
+                width: 100%;
+            }
         }
         .view_url {
+            position: absolute;
             display: flex;
             justify-content: flex-end;
+            align-items: center;
+            right: 0;
+            top: 20%;
+            @include small-pad-width {
+                position: static;
+                justify-content: center;
+                padding-bottom: 30px;
+                top: 0;
+            }
+            @include phone-width {
+                position: static;
+                justify-content: center;
+                padding-bottom: 30px;
+                top: 0;
+            }
         }
     }
 }
@@ -176,18 +306,22 @@
         margin: 0 auto;
         text-align: center;
         color: $white;
-        h1 {
-            line-height: 3.6vw;
-            font-size: 3.1vw;
-            font-weight: bolder;
-            padding-top: 5.2vw;
-        }
         h2 {
             line-height: 2vw;
             font-size: 1.5vw;
             font-weight: bold;
             padding-top: 1vw;
             padding-bottom: 2.6vw;
+            @include small-pad-width {
+                font-size: 14px;
+                line-height: 24px;
+                width: 100%;
+            }
+            @include phone-width {
+                font-size: 14px;
+                line-height: 24px;
+                width: 100%;
+            }
         }
         p {
             width: 52vw;
@@ -195,11 +329,27 @@
             line-height: 1.6vw;
             font-size: 1.1vw;
             padding-bottom: 3.6vw;
+            @include small-pad-width {
+                font-size: 14px;
+                line-height: 24px;
+                width: 100%;
+            }
+            @include phone-width {
+                font-size: 14px;
+                line-height: 24px;
+                width: 100%;
+            }
         }
         .manufacturing {
             display: flex;
+            flex-wrap: wrap;
             &_box {
-                width: 14.5vw;
+                @include small-pad-width {
+                    width: 50%;
+                }
+                @include phone-width {
+                    width: 50%;
+                }
                 p {
                     width: 14.5vw;
                     margin-top: 1vw;
@@ -207,23 +357,41 @@
                 }
                 &:nth-child(n+2) {
                     border-left: 0.05vw solid $white;
+                    @include pad-width {
+                        border: none;
+                    }
+                    @include small-pad-width {
+                        border: none;
+                    }
+                    @include phone-width {
+                        border: none;
+                    }
                 }
             }
         }
         .explore_url {
             display: flex;
             justify-content: center;
+            align-items: center;
             padding-top: 2.6vw;
             padding-bottom: 5.2vw;
             .explore {
                 display: flex;
                 align-items: center;
-                margin-top: 1.5vw;
                 padding-left: 1vw;
-                a {
-                    color: $yellow;
-                }
                 @include triangle($yellow, 0.5vw);
+                @include pad-width {
+                    @include triangle($yellow, 8px);
+                }
+                @include small-pad-width {
+                    @include triangle($yellow, 6px);
+                }
+                @include phone-width {
+                    @include triangle($yellow, 6px);
+                }
+            }
+            a {
+                color: $yellow;
             }
         }
     }

@@ -230,7 +230,6 @@ q:before, q:after {
 	content: '';
 	content: none;
 }
-
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -255,7 +254,12 @@ input, textarea, select {
         align-items: center;
         padding-left: 1vw;
         @include triangle($green, 0.5vw);
-
+        @include small-pad-width {
+            @include triangle($green, 6px);
+        }
+        @include phone-width() {
+            @include triangle($green, 6px);
+        }
     }
     a {
         color: $green;
@@ -274,6 +278,15 @@ input, textarea, select {
     background-repeat: no-repeat;
     .content {
         margin: 0 11.5vw;
+    }
+    .group_content {
+        margin: 0 11.5vw;
+        @include small-pad-width() {
+            margin: 0;
+        }
+        @include phone-width() {
+            margin: 0;
+        }
     }
 }
 
@@ -317,26 +330,85 @@ input, textarea, select {
         }
     }
 }
+.reverse {
+    display: flex;
+    flex-direction: row-reverse;
+}
 .group {
     padding-bottom: 7.8vw;
+    @include small-pad-width() {
+        left: 0;
+        width: 100%;
+        padding: 0;
+    }
+    @include phone-width() {
+        left: 0;
+        width: 100%;
+        padding: 0;
+    }
     &_box {
         width: 100%;
         .group_info {
             padding: 3.6vw 4.1vw;
             display: flex;
+            justify-content: space-between;
+            @include small-pad-width() {
+                display: block;
+            }
+            @include phone-width() {
+                display: block;
+            }
             .image {
                 overflow: hidden;
+                img {
+                    width: 31.25vw;
+                    height: 18.75vw;
+                    @include small-pad-width() {
+                        height: 190px;
+                        width: 300px;
+                        margin-bottom: 20px;
+                    }
+                    @include phone-width() {
+                        height: 190px;
+                        width: 280px;
+                        margin-bottom: 20px;
+                    }
+                }
             }
             .word {
+                @include small-pad-width() {
+                    margin: 0 auto;
+                    width: 300px;
+                }
+                @include phone-width() {
+                    margin: 0 auto;
+                    width: 280px;
+                }
                 .title {
                     display: flex;
                     border-top: 0.05vw solid $gray;
                     border-bottom: 0.05vw solid $gray;
+                    @include small-pad-width() {
+                        width: 300px;
+                    }
+                    @include phone-width() {
+                        width: 280px;
+                    }
                     img {
                         width: 2.6vw;
                         height: 3.6vw;
                         margin-right: 2vw;
                         padding: 1vw;
+                        @include small-pad-width() {
+                            width: 32px;
+                            height: 40px;
+                            padding: 12px;
+                        }
+                        @include phone-width() {
+                            width: 32px;
+                            height: 40px;
+                            padding: 12px;
+                        }
                     }
                     h2 {
                         font-size: 1.5vw;
@@ -344,6 +416,14 @@ input, textarea, select {
                         color: $black;
                         display: flex;
                         align-items: center;
+                        @include small-pad-width() {
+                            font-size: 16px;
+                            padding: 20px 0;
+                        }
+                        @include phone-width() {
+                            font-size: 16px;
+                            padding: 20px 0;
+                        }
                     }
                 }
                 p {
@@ -352,14 +432,35 @@ input, textarea, select {
                     line-height: 1.6vw;
                     padding-bottom: 3.3vw;
                     padding-top: 1.5vw;
+                    @include small-pad-width() {
+                        width: 300px;
+                        font-size: 14px;
+                        line-height: 24px;
+                        padding: 20px 0;
+                    }
+                    @include phone-width() {
+                        width: 280px;
+                        font-size: 14px;
+                        line-height: 24px;
+                        padding: 20px 0;
+                    }
                 }
                 .btn {
                     @include btn($green, $white, 0.9vw);
                     width: 29.1vw;
                     height: 3.1vw;
+                    @include small-pad-width() {
+                        width: 300px;
+                        height: 45px;
+                        @include btn($green, $white, 15px);
+                    }
+                    @include phone-width() {
+                        width: 280px;
+                        height: 45px;
+                        @include btn($green, $white, 15px);
+                    }
                     div {
-                        top: 1vw;
-                        left: 12.2vw;
+                        left: 10.2vw;
                     }
                     &:hover {
                         .group_info {
@@ -378,15 +479,9 @@ input, textarea, select {
     }
     &_box:nth-child(2n+1) {
         background-color: $white;
-        .word {
-            margin-left: 4.1vw;
-        }
     }
     &_box:nth-child(2n) {
         background-color: #DDDDDD;
-        .word {
-            margin-right: 4.1vw;
-        }
     }
 }
 .news_group {
@@ -397,12 +492,26 @@ input, textarea, select {
     .box {
         width: 33.3%;
         margin-bottom: 4.1vw;
+        @include small-pad-width() {
+            width: 100%;
+        }
+        @include phone-width() {
+            width: 100%;
+        }
         a {
             display: block;
             overflow: hidden;
             img {
                 width: 24.2vw;
                 height: 18.2vw;
+                @include small-pad-width() {
+                    width: 315px;
+                    height: 235px;
+                }
+                @include phone-width() {
+                    width: 315px;
+                    height: 235px;
+                }
             }
         }
         p {
@@ -412,6 +521,16 @@ input, textarea, select {
             padding-bottom: 1vw;
             width: 24.2vw;
             font-size: 1.1vw;
+            @include small-pad-width() {
+                width: 100%;
+                font-size: 16px;
+                line-height: 26px;
+            }
+            @include phone-width() {
+                width: 100%;
+                font-size: 16px;
+                line-height: 26px;
+            }
             a {
                 padding-left: 1vw;
                 color: $green
@@ -422,6 +541,16 @@ input, textarea, select {
                 font-size: 1.3vw;
                 font-weight: bold;
                 color: $black;
+                @include small-pad-width() {
+                    width: 100%;
+                    font-size: 16px;
+                    line-height: 26px;
+                }
+                @include phone-width() {
+                    width: 100%;
+                    font-size: 16px;
+                    line-height: 26px;
+                }
             }
         }
         &:hover {
@@ -440,13 +569,34 @@ input, textarea, select {
 .pd_group {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     &_box {
         margin: 1vw 0.5vw;
         height: 18.2vw;
         width: 17.1vw;
+        @include small-pad-width {
+            width: 48%;
+            height: 160px;
+        }
+        @include phone-width {
+            width: 48%;
+            height: 160px;
+        }
         .image {
             background-color: $white;
             overflow: hidden;
+            img {
+                width: 17.19vw;
+                width: 14.06vw;
+                @include small-pad-width {
+                    width: 150px;
+                    height: 125px;
+                }
+                @include phone-width {
+                    width: 150px;
+                    height: 125px;
+                }
+            }
         }
         .word {
             height: 3.6vw;

@@ -1,7 +1,6 @@
 // include_footer.php
 .footer {
     width: 100%;
-    height: 430px;
     background-color: $bgcolor;
     &_content {
         width: 73vw;
@@ -12,19 +11,36 @@
         .company {
             @include small-pad-width {
                 width: 100%;
+                text-align: center;
+                font-size: 14px;
+                line-height: 24px;
             }
             @include phone-width {
                 width: 100%;
+                text-align: center;
+                font-size: 14px;
+                line-height: 24px;
             }
             width: 25%;
             &_name {
+                @include small-pad-width {
+                    font-size: 26px;
+                }
+                @include phone-width {
+                    font-size: 26px;
+                }
                 line-height: 36px;
                 font-size: 1.5vw;
                 font-weight: bold;
                 margin-bottom: 1vw;
             }
             &_addr {
-                line-height: 1.4vw;
+                @include small-pad-width {
+                    font-size: 14px;
+                }
+                @include phone-width {
+                    font-size: 14px;
+                }
                 font-size: 16px;
                 margin-bottom: 1vw;
                 a {
@@ -35,10 +51,26 @@
                 }
             }
             &_tel {
+                @include small-pad-width {
+                    font-size: 14px;
+                    margin-bottom: 10px;
+                }
+                @include phone-width {
+                    font-size: 14px;
+                    margin-bottom: 10px;
+                }
                 font-size: 16px;
                 margin-bottom: 1vw;
             }
             &_email {
+                @include small-pad-width {
+                    font-size: 14px;
+                    margin-bottom: 10px;
+                }
+                @include phone-width {
+                    font-size: 14px;
+                    margin-bottom: 10px;
+                }
                 font-size: 16px;
                 margin-bottom: 1vw;
                 color: $black;
@@ -58,7 +90,7 @@
                 height: 3.1vw;
                 div {
                     top: 1vw;
-                    left: 6.7vw;
+                    left: 3.7vw;
                 }
             }
         }
@@ -99,15 +131,30 @@
     width: 100%;
     background-color: $black;
     &_content {
+        @include small-pad-width {
+            font-size: 12px;
+            padding: 15px 0;
+        }
+        @include phone-width {
+            font-size: 12px;
+            padding: 15px 0;
+        }
         width: 73vw;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
         padding: 0.6vw 0;
-        line-height: 2vw;
     }
     .info {
+        display: flex;
+        align-items: center;
         color: $white;
+        @include small-pad-width {
+            line-height: 15px;
+        }
+        @include phone-width {
+            line-height: 15px;
+        }
         a {
             color: $white;
         }
@@ -115,8 +162,6 @@
     .icon {
         img {
             padding-top: 4px;
-            width: 2.3vw;
-            height: 1.5vw;
         }
     }
 }
