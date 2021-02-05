@@ -7,19 +7,50 @@
         justify-content: center;
         border-top: 0.05vw solid $gray;
         border-bottom: 0.05vw solid $gray;
+        @include small-pad-width {
+            overflow: auto;
+            white-space: nowrap;
+            justify-content: flex-start;
+        }
+        @include phone-width {
+            overflow: auto;
+            white-space: nowrap;
+            justify-content: flex-start;
+        }
+        &::-webkit-scrollbar-button {
+            display: block;
+        }
         a {
             margin: 0 1.5vw;
-            display: inline-block;
+            display: block;
             position: relative;
             font-size: 1.3vw;
             line-height: 3.8vw;
             color: $black;
             font-weight: bold;
+            @include small-pad-width {
+                font-size: 16px;
+                line-height: 74px;
+                margin: 0 10PX;
+            }
+            @include phone-width {
+                font-size: 16px;
+                line-height: 74px;
+                margin: 0 10PX;
+            }
             &:nth-child(n+2)::before {
                 position: absolute;
                 content: ".";
                 left: -1.5vw;
                 top: -0.5vw;
+                @include small-pad-width {
+                    left: -10px;
+                    top: -4px;
+                }
+                @include phone-width {
+                    left: -10px;
+                    top: -4px;
+                }
             }
             &:hover {
                 color: $green;

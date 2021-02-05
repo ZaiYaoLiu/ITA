@@ -70,6 +70,12 @@
         }
         .content {
             margin: 0 11.5vw;
+            @include small-pad-width() {
+                margin: 0 20px;
+            }
+            @include phone-width() {
+                margin: 0 20px;
+            }
         }
         .info {
             position: absolute;
@@ -145,6 +151,12 @@
         }
         .content {
             margin: 0 11.5vw;
+            @include small-pad-width() {
+                margin: 0 20px;
+            }
+            @include phone-width() {
+                margin: 0 20px;
+            }
         }
         .info {
             position: absolute;
@@ -196,9 +208,11 @@
 }
 .group_title {
     @include small-pad-width {
+        padding-top: 50px;
         font-size: 26px;
     }
     @include phone-width {
+        padding-top: 50px;
         font-size: 26px;
     }
     font-size: 3.1vw;
@@ -209,11 +223,15 @@
     text-align: center;
     p {
         @include small-pad-width {
+            padding-top: 10px;
+            padding-bottom: 30px;
             font-size: 14px;
             line-height: 24px;
             width: 100%;
         }
         @include phone-width {
+            padding-top: 10px;
+            padding-bottom: 30px;
             font-size: 14px;
             line-height: 24px;
             width: 100%;
@@ -306,6 +324,13 @@
         margin: 0 auto;
         text-align: center;
         color: $white;
+        @include small-pad-width {
+            width: 90%;
+            margin: 0 20px;
+        }
+        @include phone-width {
+            width: 100%;
+        }
         h2 {
             line-height: 2vw;
             font-size: 1.5vw;
@@ -313,11 +338,15 @@
             padding-top: 1vw;
             padding-bottom: 2.6vw;
             @include small-pad-width {
+                padding-top: 20px;
+                padding-bottom: 30px;
                 font-size: 14px;
                 line-height: 24px;
                 width: 100%;
             }
             @include phone-width {
+                padding-top: 20px;
+                padding-bottom: 30px;
                 font-size: 14px;
                 line-height: 24px;
                 width: 100%;
@@ -330,11 +359,13 @@
             font-size: 1.1vw;
             padding-bottom: 3.6vw;
             @include small-pad-width {
+                padding-bottom: 50px;
                 font-size: 14px;
                 line-height: 24px;
                 width: 100%;
             }
             @include phone-width {
+                padding-bottom: 50px;
                 font-size: 14px;
                 line-height: 24px;
                 width: 100%;
@@ -343,17 +374,28 @@
         .manufacturing {
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
             &_box {
                 @include small-pad-width {
                     width: 50%;
+                    margin-bottom: 50px;
                 }
                 @include phone-width {
                     width: 50%;
+                    margin-bottom: 50px;
                 }
                 p {
                     width: 14.5vw;
                     margin-top: 1vw;
                     padding-bottom: 0;
+                    @include small-pad-width {
+                        width: auto;
+                        white-space: nowrap;
+                    }
+                    @include phone-width {
+                        width: auto;
+                        white-space: nowrap;
+                    }
                 }
                 &:nth-child(n+2) {
                     border-left: 0.05vw solid $white;
@@ -375,6 +417,12 @@
             align-items: center;
             padding-top: 2.6vw;
             padding-bottom: 5.2vw;
+            @include small-pad-width {
+                display: none;
+            }
+            @include phone-width {
+                display: none;
+            }
             .explore {
                 display: flex;
                 align-items: center;

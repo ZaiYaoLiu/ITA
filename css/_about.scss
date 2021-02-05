@@ -36,9 +36,21 @@
 .oem_url {
     display: flex;
     justify-content: center;
+    align-items: center;
     color: $black;
     font-size: 1.1vw;
+    font-weight: bold;
     padding: 35px;
+    @include small-pad-width {
+        font-size: 14px;
+        line-height: 24px;
+        padding: 20px;
+    }
+    @include phone-width() {
+        font-size: 14px;
+        line-height: 24px;
+        padding: 20px;
+    }
     div {
         @include triangle($black, 11px);
         margin-left: 1vw;

@@ -131,19 +131,21 @@
     width: 100%;
     background-color: $black;
     &_content {
-        @include small-pad-width {
-            font-size: 12px;
-            padding: 15px 0;
-        }
-        @include phone-width {
-            font-size: 12px;
-            padding: 15px 0;
-        }
         width: 73vw;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
         padding: 0.6vw 0;
+        @include small-pad-width {
+            width: 90%;
+            font-size: 12px;
+            padding: 15px 0;
+            margin: 0 20px;
+        }
+        @include phone-width {
+            font-size: 12px;
+            padding: 15px 0;
+        }
     }
     .info {
         display: flex;
@@ -154,6 +156,17 @@
         }
         @include phone-width {
             line-height: 15px;
+        }
+        p {
+            @include pad-width {
+                font-size: 14px;
+            }
+            @include small-pad-width {
+                width: 210px;
+            }
+            @include phone-width {
+                width: 210px;
+            }
         }
         a {
             color: $white;

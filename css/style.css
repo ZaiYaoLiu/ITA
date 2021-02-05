@@ -465,8 +465,10 @@ CSS 寫法
 }
 @media all and (min-width: 375px) and (max-width: 767px) {
   .copyright_content {
+    width: 90%;
     font-size: 12px;
     padding: 15px 0;
+    margin: 0 20px;
   }
 }
 @media all and (max-width: 374px) {
@@ -488,6 +490,21 @@ CSS 寫法
 @media all and (max-width: 374px) {
   .copyright .info {
     line-height: 15px;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1039px) {
+  .copyright .info p {
+    font-size: 14px;
+  }
+}
+@media all and (min-width: 375px) and (max-width: 767px) {
+  .copyright .info p {
+    width: 210px;
+  }
+}
+@media all and (max-width: 374px) {
+  .copyright .info p {
+    width: 210px;
   }
 }
 .copyright .info a {
@@ -581,6 +598,16 @@ CSS 寫法
 }
 .index_banner .img_left .content {
   margin: 0 11.5vw;
+}
+@media all and (min-width: 375px) and (max-width: 767px) {
+  .index_banner .img_left .content {
+    margin: 0 20px;
+  }
+}
+@media all and (max-width: 374px) {
+  .index_banner .img_left .content {
+    margin: 0 20px;
+  }
 }
 .index_banner .img_left .info {
   position: absolute;
@@ -677,6 +704,16 @@ CSS 寫法
 .index_banner .img_right .content {
   margin: 0 11.5vw;
 }
+@media all and (min-width: 375px) and (max-width: 767px) {
+  .index_banner .img_right .content {
+    margin: 0 20px;
+  }
+}
+@media all and (max-width: 374px) {
+  .index_banner .img_right .content {
+    margin: 0 20px;
+  }
+}
 .index_banner .img_right .info {
   position: absolute;
   top: 15.1vw;
@@ -746,11 +783,13 @@ CSS 寫法
 }
 @media all and (min-width: 375px) and (max-width: 767px) {
   .group_title {
+    padding-top: 50px;
     font-size: 26px;
   }
 }
 @media all and (max-width: 374px) {
   .group_title {
+    padding-top: 50px;
     font-size: 26px;
   }
 }
@@ -769,6 +808,8 @@ CSS 寫法
 }
 @media all and (min-width: 375px) and (max-width: 767px) {
   .index_info p {
+    padding-top: 10px;
+    padding-bottom: 30px;
     font-size: 14px;
     line-height: 24px;
     width: 100%;
@@ -776,6 +817,8 @@ CSS 寫法
 }
 @media all and (max-width: 374px) {
   .index_info p {
+    padding-top: 10px;
+    padding-bottom: 30px;
     font-size: 14px;
     line-height: 24px;
     width: 100%;
@@ -872,6 +915,17 @@ CSS 寫法
   text-align: center;
   color: #ffffff;
 }
+@media all and (min-width: 375px) and (max-width: 767px) {
+  .md_main .contnet {
+    width: 90%;
+    margin: 0 20px;
+  }
+}
+@media all and (max-width: 374px) {
+  .md_main .contnet {
+    width: 100%;
+  }
+}
 .md_main .contnet h2 {
   line-height: 2vw;
   font-size: 1.5vw;
@@ -881,6 +935,8 @@ CSS 寫法
 }
 @media all and (min-width: 375px) and (max-width: 767px) {
   .md_main .contnet h2 {
+    padding-top: 20px;
+    padding-bottom: 30px;
     font-size: 14px;
     line-height: 24px;
     width: 100%;
@@ -888,6 +944,8 @@ CSS 寫法
 }
 @media all and (max-width: 374px) {
   .md_main .contnet h2 {
+    padding-top: 20px;
+    padding-bottom: 30px;
     font-size: 14px;
     line-height: 24px;
     width: 100%;
@@ -902,6 +960,7 @@ CSS 寫法
 }
 @media all and (min-width: 375px) and (max-width: 767px) {
   .md_main .contnet p {
+    padding-bottom: 50px;
     font-size: 14px;
     line-height: 24px;
     width: 100%;
@@ -909,6 +968,7 @@ CSS 寫法
 }
 @media all and (max-width: 374px) {
   .md_main .contnet p {
+    padding-bottom: 50px;
     font-size: 14px;
     line-height: 24px;
     width: 100%;
@@ -917,21 +977,36 @@ CSS 寫法
 .md_main .contnet .manufacturing {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 @media all and (min-width: 375px) and (max-width: 767px) {
   .md_main .contnet .manufacturing_box {
     width: 50%;
+    margin-bottom: 50px;
   }
 }
 @media all and (max-width: 374px) {
   .md_main .contnet .manufacturing_box {
     width: 50%;
+    margin-bottom: 50px;
   }
 }
 .md_main .contnet .manufacturing_box p {
   width: 14.5vw;
   margin-top: 1vw;
   padding-bottom: 0;
+}
+@media all and (min-width: 375px) and (max-width: 767px) {
+  .md_main .contnet .manufacturing_box p {
+    width: auto;
+    white-space: nowrap;
+  }
+}
+@media all and (max-width: 374px) {
+  .md_main .contnet .manufacturing_box p {
+    width: auto;
+    white-space: nowrap;
+  }
 }
 .md_main .contnet .manufacturing_box:nth-child(n+2) {
   border-left: 0.05vw solid #ffffff;
@@ -957,6 +1032,16 @@ CSS 寫法
   align-items: center;
   padding-top: 2.6vw;
   padding-bottom: 5.2vw;
+}
+@media all and (min-width: 375px) and (max-width: 767px) {
+  .md_main .contnet .explore_url {
+    display: none;
+  }
+}
+@media all and (max-width: 374px) {
+  .md_main .contnet .explore_url {
+    display: none;
+  }
 }
 .md_main .contnet .explore_url .explore {
   display: flex;
@@ -1073,9 +1158,25 @@ CSS 寫法
 .oem_url {
   display: flex;
   justify-content: center;
+  align-items: center;
   color: #1f1f1f;
   font-size: 1.1vw;
+  font-weight: bold;
   padding: 35px;
+}
+@media all and (min-width: 375px) and (max-width: 767px) {
+  .oem_url {
+    font-size: 14px;
+    line-height: 24px;
+    padding: 20px;
+  }
+}
+@media all and (max-width: 374px) {
+  .oem_url {
+    font-size: 14px;
+    line-height: 24px;
+    padding: 20px;
+  }
 }
 .oem_url div {
   width: 0;
@@ -1118,6 +1219,20 @@ CSS 寫法
   color: #00802f;
   padding-top: 5.2vw;
 }
+@media all and (min-width: 375px) and (max-width: 767px) {
+  .brand_info h1 {
+    font-size: 26px;
+    line-height: 40px;
+    padding-top: 75px;
+  }
+}
+@media all and (max-width: 374px) {
+  .brand_info h1 {
+    font-size: 26px;
+    line-height: 40px;
+    padding-top: 75px;
+  }
+}
 .brand_info h2 {
   line-height: 2vw;
   font-size: 1.5vw;
@@ -1125,6 +1240,22 @@ CSS 寫法
   color: #1f1f1f;
   padding-top: 2.6vw;
   padding-bottom: 1vw;
+}
+@media all and (min-width: 375px) and (max-width: 767px) {
+  .brand_info h2 {
+    font-size: 16px;
+    line-height: 26px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+}
+@media all and (max-width: 374px) {
+  .brand_info h2 {
+    font-size: 16px;
+    line-height: 26px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
 }
 .brand_info p {
   width: 52vw;
@@ -1134,11 +1265,51 @@ CSS 寫法
   color: #1f1f1f;
   padding-bottom: 3.6vw;
 }
+@media all and (min-width: 375px) and (max-width: 767px) {
+  .brand_info p {
+    width: 100%;
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 50px;
+  }
+}
+@media all and (max-width: 374px) {
+  .brand_info p {
+    width: 100%;
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 50px;
+  }
+}
+.brand_info .cmp_img img {
+  width: 72.92vw;
+  height: 31.72vw;
+}
+@media all and (min-width: 375px) and (max-width: 767px) {
+  .brand_info .cmp_img img {
+    width: 100%;
+  }
+}
+@media all and (max-width: 374px) {
+  .brand_info .cmp_img img {
+    width: 100%;
+  }
+}
 .brand_info .title {
   padding-top: 7.8vw;
   font-size: 2.3vw;
   font-weight: bolder;
   padding-bottom: 3.1vw;
+}
+@media all and (min-width: 375px) and (max-width: 767px) {
+  .brand_info .title {
+    font-size: 22px;
+  }
+}
+@media all and (max-width: 374px) {
+  .brand_info .title {
+    font-size: 22px;
+  }
 }
 .brand_info .title .type {
   position: relative;
@@ -1183,6 +1354,96 @@ CSS 寫法
   top: 50%;
   transform: translateX(-50%);
 }
+@media all and (min-width: 375px) and (max-width: 767px) {
+  .brand_info .title .type {
+    position: relative;
+  }
+  .brand_info .title .type::before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background-color: #1f1f1f;
+    transform: rotate(45deg) translateX(-50%);
+    left: 27%;
+    top: 50%;
+  }
+  .brand_info .title .type::after {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background-color: #1f1f1f;
+    transform: rotate(45deg) translateX(-50%);
+    right: 27%;
+    top: 50%;
+  }
+  .brand_info .title .type span::before {
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 0px;
+    background-color: #1f1f1f;
+    left: 30%;
+    top: 50%;
+    transform: translateX(-50%);
+  }
+  .brand_info .title .type span::after {
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 0px;
+    background-color: #1f1f1f;
+    right: 25%;
+    top: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media all and (max-width: 374px) {
+  .brand_info .title .type {
+    position: relative;
+  }
+  .brand_info .title .type::before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background-color: #1f1f1f;
+    transform: rotate(45deg) translateX(-50%);
+    left: 17%;
+    top: 50%;
+  }
+  .brand_info .title .type::after {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background-color: #1f1f1f;
+    transform: rotate(45deg) translateX(-50%);
+    right: 17%;
+    top: 50%;
+  }
+  .brand_info .title .type span::before {
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 4.1vw;
+    background-color: #1f1f1f;
+    left: 20%;
+    top: 50%;
+    transform: translateX(-50%);
+  }
+  .brand_info .title .type span::after {
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 4.1vw;
+    background-color: #1f1f1f;
+    right: 15%;
+    top: 50%;
+    transform: translateX(-50%);
+  }
+}
 .brand_info .title .type2 {
   position: relative;
 }
@@ -1226,10 +1487,115 @@ CSS 寫法
   top: 50%;
   transform: translateX(-50%);
 }
+@media all and (min-width: 375px) and (max-width: 767px) {
+  .brand_info .title .type2 {
+    position: relative;
+  }
+  .brand_info .title .type2::before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background-color: #1f1f1f;
+    transform: rotate(45deg) translateX(-50%);
+    left: 12%;
+    top: 50%;
+  }
+  .brand_info .title .type2::after {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background-color: #1f1f1f;
+    transform: rotate(45deg) translateX(-50%);
+    right: 12%;
+    top: 50%;
+  }
+  .brand_info .title .type2 span::before {
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 0px;
+    background-color: #1f1f1f;
+    left: 15%;
+    top: 50%;
+    transform: translateX(-50%);
+  }
+  .brand_info .title .type2 span::after {
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 0px;
+    background-color: #1f1f1f;
+    right: 10%;
+    top: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media all and (max-width: 374px) {
+  .brand_info .title .type2 {
+    position: relative;
+  }
+  .brand_info .title .type2::before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background-color: #1f1f1f;
+    transform: rotate(45deg) translateX(-50%);
+    left: 2%;
+    top: 50%;
+  }
+  .brand_info .title .type2::after {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background-color: #1f1f1f;
+    transform: rotate(45deg) translateX(-50%);
+    right: 2%;
+    top: 50%;
+  }
+  .brand_info .title .type2 span::before {
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 0px;
+    background-color: #1f1f1f;
+    left: 5%;
+    top: 50%;
+    transform: translateX(-50%);
+  }
+  .brand_info .title .type2 span::after {
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 0px;
+    background-color: #1f1f1f;
+    right: 0%;
+    top: 50%;
+    transform: translateX(-50%);
+  }
+}
 .brand_info .time_line {
   width: 52vw;
   margin: 0 auto;
   padding-bottom: 4.1vw;
+}
+@media all and (min-width: 768px) and (max-width: 1039px) {
+  .brand_info .time_line {
+    width: 100%;
+  }
+}
+@media all and (min-width: 375px) and (max-width: 767px) {
+  .brand_info .time_line {
+    width: 100%;
+  }
+}
+@media all and (max-width: 374px) {
+  .brand_info .time_line {
+    width: 100%;
+  }
 }
 .brand_info .time_line .item {
   display: flex;
@@ -1241,13 +1607,35 @@ CSS 寫法
   font-weight: bold;
   background-color: #ffffff;
   line-height: 90px;
-  height: 90px;
   width: 20%;
-  text-align: center;
-  justify-content: center;
+}
+@media all and (min-width: 375px) and (max-width: 767px) {
+  .brand_info .time_line .item .time {
+    min-width: 72px;
+  }
+}
+@media all and (max-width: 374px) {
+  .brand_info .time_line .item .time {
+    min-width: 72px;
+  }
 }
 .brand_info .time_line .item .word {
   padding-left: 36px;
+  text-align: left;
+}
+@media all and (min-width: 375px) and (max-width: 767px) {
+  .brand_info .time_line .item .word {
+    padding-left: 20px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+@media all and (max-width: 374px) {
+  .brand_info .time_line .item .word {
+    padding-left: 20px;
+    font-size: 14px;
+    line-height: 24px;
+  }
 }
 .brand_info .time_line .item:nth-child(1) {
   border-top: 2px solid #8e8e8f;
@@ -1256,9 +1644,45 @@ CSS 寫法
   display: flex;
   justify-content: space-around;
 }
+@media all and (min-width: 375px) and (max-width: 767px) {
+  .brand_info .flex_img {
+    display: block;
+  }
+}
+@media all and (max-width: 374px) {
+  .brand_info .flex_img {
+    display: block;
+  }
+}
+.brand_info .flex_img img {
+  width: 34.9vw;
+  height: 20.83vw;
+}
+@media all and (min-width: 375px) and (max-width: 767px) {
+  .brand_info .flex_img img {
+    width: 100%;
+    height: 185px;
+  }
+}
+@media all and (max-width: 374px) {
+  .brand_info .flex_img img {
+    width: 100%;
+    height: 185px;
+  }
+}
 .brand_info .flex_img p {
   margin-top: 0.5vw;
-  width: 670px;
+  width: 34.9vw;
+}
+@media all and (min-width: 375px) and (max-width: 767px) {
+  .brand_info .flex_img p {
+    margin-bottom: 0;
+  }
+}
+@media all and (max-width: 374px) {
+  .brand_info .flex_img p {
+    margin-bottom: 0;
+  }
 }
 .brand_info .flex_img_circle {
   display: flex;
@@ -1269,9 +1693,61 @@ CSS 寫法
   position: relative;
   width: 355px;
   height: 355px;
-  margin: 0 75px;
+  margin: 0 3.9vw;
   border-radius: 50%;
   background-color: #ffffff;
+}
+@media all and (min-width: 768px) and (max-width: 1039px) {
+  .brand_info .flex_img_circle .brand_img {
+    width: 250px;
+    height: 250px;
+  }
+}
+@media all and (min-width: 375px) and (max-width: 767px) {
+  .brand_info .flex_img_circle .brand_img {
+    width: 130px;
+    height: 130px;
+    margin: 0 7px;
+  }
+}
+@media all and (max-width: 374px) {
+  .brand_info .flex_img_circle .brand_img {
+    width: 125px;
+    height: 125px;
+    margin: 0;
+  }
+}
+.brand_info .flex_img_circle .brand_img .img1 {
+  width: 10.73vw;
+  height: 6.875vw;
+}
+@media all and (min-width: 375px) and (max-width: 767px) {
+  .brand_info .flex_img_circle .brand_img .img1 {
+    width: 92px;
+    height: 58px;
+  }
+}
+@media all and (max-width: 374px) {
+  .brand_info .flex_img_circle .brand_img .img1 {
+    width: 92px;
+    height: 58px;
+  }
+}
+.brand_info .flex_img_circle .brand_img .img2 {
+  width: 9.64vw;
+  height: 9.64vw;
+}
+@media all and (min-width: 375px) and (max-width: 767px) {
+  .brand_info .flex_img_circle .brand_img .img2 {
+    width: 82px;
+    height: 82px;
+  }
+}
+@media all and (max-width: 374px) {
+  .brand_info .flex_img_circle .brand_img .img2 {
+    width: 82px;
+    height: 82px;
+  }
 }
 .brand_info .flex_img_circle .brand_img_mask {
   position: absolute;
@@ -1284,9 +1760,39 @@ CSS 寫法
   border-radius: 50%;
   z-index: 9;
 }
+@media all and (min-width: 768px) and (max-width: 1039px) {
+  .brand_info .flex_img_circle .brand_img_mask {
+    width: 250px;
+    height: 250px;
+  }
+}
+@media all and (min-width: 375px) and (max-width: 767px) {
+  .brand_info .flex_img_circle .brand_img_mask {
+    width: 130px;
+    height: 130px;
+  }
+}
+@media all and (max-width: 374px) {
+  .brand_info .flex_img_circle .brand_img_mask {
+    width: 125px;
+    height: 125px;
+  }
+}
 .brand_info .flex_img_circle .brand_img_mask .word {
   position: relative;
   top: 45%;
+}
+@media all and (min-width: 375px) and (max-width: 767px) {
+  .brand_info .flex_img_circle .brand_img_mask .word {
+    top: 35%;
+    font-size: 19px;
+  }
+}
+@media all and (max-width: 374px) {
+  .brand_info .flex_img_circle .brand_img_mask .word {
+    top: 35%;
+    font-size: 19px;
+  }
 }
 .brand_info .flex_img_circle .brand_img img {
   position: absolute;
@@ -1304,6 +1810,20 @@ CSS 寫法
   color: #00802f;
   padding-top: 5.2vw;
 }
+@media all and (min-width: 375px) and (max-width: 767px) {
+  .philosophy_info h1 {
+    font-size: 26px;
+    line-height: 40px;
+    padding-top: 75px;
+  }
+}
+@media all and (max-width: 374px) {
+  .philosophy_info h1 {
+    font-size: 26px;
+    line-height: 40px;
+    padding-top: 75px;
+  }
+}
 .philosophy_info p {
   width: 52vw;
   margin: 0 auto;
@@ -1312,15 +1832,55 @@ CSS 寫法
   padding-top: 2.6vw;
   padding-bottom: 3.6vw;
 }
+@media all and (min-width: 375px) and (max-width: 767px) {
+  .philosophy_info p {
+    width: 100%;
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 50px;
+  }
+}
+@media all and (max-width: 374px) {
+  .philosophy_info p {
+    width: 100%;
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 50px;
+  }
+}
 .philosophy_info .box {
   margin: 1vw auto;
   width: 910px;
-  height: 135px;
+  height: 7vw;
   background-color: #ffffff;
 }
+@media all and (min-width: 768px) and (max-width: 1039px) {
+  .philosophy_info .box {
+    width: 70%;
+    height: 90px;
+  }
+}
+@media all and (min-width: 375px) and (max-width: 767px) {
+  .philosophy_info .box {
+    width: 100%;
+    height: 75px;
+  }
+}
+@media all and (max-width: 374px) {
+  .philosophy_info .box {
+    width: 100%;
+    height: 75px;
+  }
+}
 .philosophy_info .box_info {
-  padding: 1vw 75px;
+  padding: 1vw 3.9vw;
   display: flex;
+  white-space: nowrap;
+}
+@media all and (max-width: 374px) {
+  .philosophy_info .box_info {
+    white-space: normal;
+  }
 }
 .philosophy_info .box_info_title {
   color: #00802f;
@@ -1336,6 +1896,11 @@ CSS 寫法
 .philosophy_info .box_info_title .number {
   padding-top: 0.5vw;
   font-size: 54px;
+}
+@media all and (max-width: 374px) {
+  .philosophy_info .box_info_title .number {
+    font-size: 40px;
+  }
 }
 .philosophy_info .box_info .info {
   margin-left: 2.6vw;
@@ -1392,15 +1957,128 @@ CSS 寫法
   top: 50%;
   transform: translateX(-50%);
 }
+@media all and (min-width: 375px) and (max-width: 767px) {
+  .philosophy_info .title {
+    font-size: 26px;
+    position: relative;
+  }
+  .philosophy_info .title::before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background-color: #1f1f1f;
+    transform: rotate(45deg) translateX(-50%);
+    left: 17%;
+    top: 50%;
+  }
+  .philosophy_info .title::after {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background-color: #1f1f1f;
+    transform: rotate(45deg) translateX(-50%);
+    right: 17%;
+    top: 50%;
+  }
+  .philosophy_info .title span::before {
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 0;
+    background-color: #1f1f1f;
+    left: 20%;
+    top: 50%;
+    transform: translateX(-50%);
+  }
+  .philosophy_info .title span::after {
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 0;
+    background-color: #1f1f1f;
+    right: 15%;
+    top: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media all and (max-width: 374px) {
+  .philosophy_info .title {
+    font-size: 20px;
+    position: relative;
+  }
+  .philosophy_info .title::before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background-color: #1f1f1f;
+    transform: rotate(45deg) translateX(-50%);
+    left: 17%;
+    top: 50%;
+  }
+  .philosophy_info .title::after {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background-color: #1f1f1f;
+    transform: rotate(45deg) translateX(-50%);
+    right: 17%;
+    top: 50%;
+  }
+  .philosophy_info .title span::before {
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 0;
+    background-color: #1f1f1f;
+    left: 20%;
+    top: 50%;
+    transform: translateX(-50%);
+  }
+  .philosophy_info .title span::after {
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 0;
+    background-color: #1f1f1f;
+    right: 15%;
+    top: 50%;
+    transform: translateX(-50%);
+  }
+}
 .philosophy_info .advantage {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
+@media all and (min-width: 375px) and (max-width: 767px) {
+  .philosophy_info .advantage {
+    justify-content: center;
+  }
+}
+@media all and (max-width: 374px) {
+  .philosophy_info .advantage {
+    justify-content: center;
+  }
+}
 .philosophy_info .advantage_box {
   width: 45%;
   display: flex;
   padding-bottom: 3.1vw;
+}
+@media all and (min-width: 375px) and (max-width: 767px) {
+  .philosophy_info .advantage_box {
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+@media all and (max-width: 374px) {
+  .philosophy_info .advantage_box {
+    display: block;
+  }
 }
 .philosophy_info .advantage_box .logo {
   position: relative;
@@ -1410,21 +2088,64 @@ CSS 寫法
   border-radius: 50%;
   margin-right: 2.6vw;
 }
+@media all and (min-width: 375px) and (max-width: 767px) {
+  .philosophy_info .advantage_box .logo {
+    width: 135px;
+    margin: 0 auto;
+  }
+}
+@media all and (max-width: 374px) {
+  .philosophy_info .advantage_box .logo {
+    min-width: 100px;
+    height: 100px;
+    margin: 0 auto;
+  }
+}
 .philosophy_info .advantage_box .logo img {
   position: absolute;
   top: 50%;
-  left: 2.6vw;
-  transform: translate(-25%, -50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .philosophy_info .advantage_box .info {
   font-size: 1.1vw;
   text-align: left;
   line-height: 1.6vw;
 }
+@media all and (min-width: 375px) and (max-width: 767px) {
+  .philosophy_info .advantage_box .info {
+    text-align: center;
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+@media all and (max-width: 374px) {
+  .philosophy_info .advantage_box .info {
+    text-align: center;
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
 .philosophy_info .advantage_box .info_title {
   font-size: 1.5vw;
   font-weight: bold;
   padding-bottom: 1vw;
+}
+@media all and (min-width: 375px) and (max-width: 767px) {
+  .philosophy_info .advantage_box .info_title {
+    text-align: center;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 15px 0;
+  }
+}
+@media all and (max-width: 374px) {
+  .philosophy_info .advantage_box .info_title {
+    text-align: center;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 15px 0;
+  }
 }
 .philosophy_info .vision {
   padding-bottom: 7.8vw;
@@ -1805,20 +2526,63 @@ CSS 寫法
   border-top: 0.05vw solid #bdbebf;
   border-bottom: 0.05vw solid #bdbebf;
 }
+@media all and (min-width: 375px) and (max-width: 767px) {
+  .products_info_sub {
+    overflow: auto;
+    white-space: nowrap;
+    justify-content: flex-start;
+  }
+}
+@media all and (max-width: 374px) {
+  .products_info_sub {
+    overflow: auto;
+    white-space: nowrap;
+    justify-content: flex-start;
+  }
+}
+.products_info_sub::-webkit-scrollbar-button {
+  display: block;
+}
 .products_info_sub a {
   margin: 0 1.5vw;
-  display: inline-block;
+  display: block;
   position: relative;
   font-size: 1.3vw;
   line-height: 3.8vw;
   color: #1f1f1f;
   font-weight: bold;
 }
+@media all and (min-width: 375px) and (max-width: 767px) {
+  .products_info_sub a {
+    font-size: 16px;
+    line-height: 74px;
+    margin: 0 10PX;
+  }
+}
+@media all and (max-width: 374px) {
+  .products_info_sub a {
+    font-size: 16px;
+    line-height: 74px;
+    margin: 0 10PX;
+  }
+}
 .products_info_sub a:nth-child(n+2)::before {
   position: absolute;
   content: ".";
   left: -1.5vw;
   top: -0.5vw;
+}
+@media all and (min-width: 375px) and (max-width: 767px) {
+  .products_info_sub a:nth-child(n+2)::before {
+    left: -10px;
+    top: -4px;
+  }
+}
+@media all and (max-width: 374px) {
+  .products_info_sub a:nth-child(n+2)::before {
+    left: -10px;
+    top: -4px;
+  }
 }
 .products_info_sub a:hover {
   color: #00802f;
@@ -2929,6 +3693,16 @@ input, textarea, select {
 .main .content {
   margin: 0 11.5vw;
 }
+@media all and (min-width: 375px) and (max-width: 767px) {
+  .main .content {
+    margin: 0 20px;
+  }
+}
+@media all and (max-width: 374px) {
+  .main .content {
+    margin: 0 20px;
+  }
+}
 .main .group_content {
   margin: 0 11.5vw;
 }
@@ -2961,6 +3735,32 @@ input, textarea, select {
   font-weight: bolder;
   text-align: center;
 }
+@media all and (min-width: 375px) and (max-width: 767px) {
+  .banner .content h1 {
+    font-size: 40px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media all and (max-width: 374px) {
+  .banner .content h1 {
+    font-size: 40px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media all and (min-width: 375px) and (max-width: 767px) {
+  .banner .content .breadcrumb {
+    position: relative;
+    top: 30px;
+  }
+}
+@media all and (max-width: 374px) {
+  .banner .content .breadcrumb {
+    position: relative;
+    top: 30px;
+  }
+}
 .banner .content .breadcrumb ol {
   display: flex;
 }
@@ -2971,6 +3771,18 @@ input, textarea, select {
 .banner .content .breadcrumb ol li a {
   color: #ffffff;
   font-size: 16px;
+}
+@media all and (min-width: 375px) and (max-width: 767px) {
+  .banner .content .breadcrumb ol li a {
+    color: #1f1f1f;
+    font-size: 12px;
+  }
+}
+@media all and (max-width: 374px) {
+  .banner .content .breadcrumb ol li a {
+    color: #1f1f1f;
+    font-size: 12px;
+  }
 }
 .banner .content .breadcrumb ol li:nth-child(1) {
   border-bottom: 0.3vw solid #ffec00;
@@ -3014,11 +3826,13 @@ input, textarea, select {
 @media all and (min-width: 375px) and (max-width: 767px) {
   .group_box .group_info {
     display: block;
+    padding: 30px;
   }
 }
 @media all and (max-width: 374px) {
   .group_box .group_info {
     display: block;
+    padding: 20px;
   }
 }
 .group_box .group_info .image {
@@ -3030,28 +3844,28 @@ input, textarea, select {
 }
 @media all and (min-width: 375px) and (max-width: 767px) {
   .group_box .group_info .image img {
-    height: 190px;
-    width: 300px;
+    height: 200px;
+    width: 100%;
     margin-bottom: 20px;
   }
 }
 @media all and (max-width: 374px) {
   .group_box .group_info .image img {
-    height: 190px;
-    width: 280px;
+    height: 200px;
+    width: 100%;
     margin-bottom: 20px;
   }
 }
 @media all and (min-width: 375px) and (max-width: 767px) {
   .group_box .group_info .word {
     margin: 0 auto;
-    width: 300px;
+    width: 100%;
   }
 }
 @media all and (max-width: 374px) {
   .group_box .group_info .word {
     margin: 0 auto;
-    width: 280px;
+    width: 100%;
   }
 }
 .group_box .group_info .word .title {
@@ -3061,12 +3875,12 @@ input, textarea, select {
 }
 @media all and (min-width: 375px) and (max-width: 767px) {
   .group_box .group_info .word .title {
-    width: 300px;
+    width: 100%;
   }
 }
 @media all and (max-width: 374px) {
   .group_box .group_info .word .title {
-    width: 280px;
+    width: 100%;
   }
 }
 .group_box .group_info .word .title img {
@@ -3117,7 +3931,7 @@ input, textarea, select {
 }
 @media all and (min-width: 375px) and (max-width: 767px) {
   .group_box .group_info .word p {
-    width: 300px;
+    width: 100%;
     font-size: 14px;
     line-height: 24px;
     padding: 20px 0;
@@ -3125,7 +3939,7 @@ input, textarea, select {
 }
 @media all and (max-width: 374px) {
   .group_box .group_info .word p {
-    width: 280px;
+    width: 100%;
     font-size: 14px;
     line-height: 24px;
     padding: 20px 0;
@@ -3185,7 +3999,7 @@ input, textarea, select {
 }
 @media all and (min-width: 375px) and (max-width: 767px) {
   .group_box .group_info .word .btn {
-    width: 300px;
+    width: 100%;
     height: 45px;
     border: 0.05vw solid #00802f;
     position: relative;
@@ -3239,7 +4053,7 @@ input, textarea, select {
 }
 @media all and (max-width: 374px) {
   .group_box .group_info .word .btn {
-    width: 280px;
+    width: 100%;
     height: 45px;
     border: 0.05vw solid #00802f;
     position: relative;
@@ -3338,13 +4152,13 @@ input, textarea, select {
 }
 @media all and (min-width: 375px) and (max-width: 767px) {
   .news_group .box a img {
-    width: 315px;
+    width: 100%;
     height: 235px;
   }
 }
 @media all and (max-width: 374px) {
   .news_group .box a img {
-    width: 315px;
+    width: 100%;
     height: 235px;
   }
 }
@@ -3404,7 +4218,7 @@ input, textarea, select {
 .pd_group {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
 }
 .pd_group_box {
   margin: 1vw 0.5vw;
@@ -3451,6 +4265,16 @@ input, textarea, select {
   background-color: #ffffff;
   margin-top: 0.3vw;
   color: #1f1f1f;
+}
+@media all and (min-width: 375px) and (max-width: 767px) {
+  .pd_group_box .word {
+    padding: 8px;
+  }
+}
+@media all and (max-width: 374px) {
+  .pd_group_box .word {
+    padding: 8px;
+  }
 }
 .pd_group_box:hover .image img {
   transform: scale(1.2, 1.2);

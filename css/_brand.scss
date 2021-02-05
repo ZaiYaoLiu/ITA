@@ -7,6 +7,16 @@
         font-weight: bolder;
         color: $green;
         padding-top: 5.2vw;
+        @include small-pad-width {
+            font-size: 26px;
+            line-height: 40px;
+            padding-top: 75px;
+        }
+        @include phone-width {
+            font-size: 26px;
+            line-height: 40px;
+            padding-top: 75px;
+        }
     }
     h2 {
         line-height: 2vw;
@@ -15,6 +25,18 @@
         color: $black;
         padding-top: 2.6vw;
         padding-bottom: 1vw;
+        @include small-pad-width {
+            font-size: 16px;
+            line-height: 26px;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+        @include phone-width {
+            font-size: 16px;
+            line-height: 26px;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
     }
     p {
         width: 52vw;
@@ -23,23 +45,74 @@
         font-size: 1.1vw;
         color: $black;
         padding-bottom: 3.6vw;
+        @include small-pad-width {
+            width: 100%;
+            font-size: 14px;
+            line-height: 24px;
+            margin-bottom: 50px;
+        }
+        @include phone-width {
+            width: 100%;
+            font-size: 14px;
+            line-height: 24px;
+            margin-bottom: 50px;
+        }
+    }
+    .cmp_img {
+        img {
+            width: 72.92vw;
+            height: 31.72vw;
+            @include small-pad-width {
+                width: 100%;
+            }
+            @include phone-width {
+                width: 100%;
+            }
+        }
     }
     .title {
         padding-top: 7.8vw;
         font-size: 2.3vw;
         font-weight: bolder;
         padding-bottom: 3.1vw;
+        @include small-pad-width {
+            font-size: 22px;
+        }
+        @include phone-width {
+            font-size: 22px;
+        }
         .type {
             @include title_type(4.1vw, 38%);
+            @include small-pad-width {
+                @include title_type(0px, 30%);
+            }
+            @include phone-width {
+                @include title_type(4.1vw, 20%);
+            }
         }
         .type2 {
             @include title_type(4.1vw, 30%);
+            @include small-pad-width {
+                @include title_type(0px, 15%);
+            }
+            @include phone-width {
+                @include title_type(0px, 5%);
+            }
         }
     }
     .time_line {
         width: 52vw;
         margin: 0 auto;
         padding-bottom: 4.1vw;
+        @include pad-width {
+            width: 100%;
+        }
+        @include small-pad-width {
+            width: 100%;
+        }
+        @include phone-width {
+            width: 100%;
+        }
         .item {
             display: flex;
             align-items: center;
@@ -49,13 +122,27 @@
                 font-weight: bold;
                 background-color: $white;
                 line-height: 90px;
-                height: 90px;
                 width: 20%;
-                text-align: center;
-                justify-content: center;
+                @include small-pad-width {
+                    min-width: 72px;
+                }
+                @include phone-width {
+                    min-width: 72px;
+                }
             }
             .word {
                 padding-left: 36px;
+                text-align: left;
+                @include small-pad-width {
+                    padding-left: 20px;
+                    font-size: 14px;
+                    line-height: 24px;
+                }
+                @include phone-width {
+                    padding-left: 20px;
+                    font-size: 14px;
+                    line-height: 24px;
+                }
             }
             &:nth-child(1) {
                 border-top: 2px solid $deep_gray;
@@ -65,9 +152,33 @@
     .flex_img {
         display: flex;
         justify-content: space-around;
+        @include small-pad-width {
+            display: block;
+        }
+        @include phone-width {
+            display: block;
+        }
+        img {
+            width: 34.9vw;
+            height: 20.83vw;
+            @include small-pad-width {
+                width: 100%;
+                height: 185px;
+            }
+            @include phone-width {
+                width: 100%;
+                height: 185px;
+            }
+        }
         p {
             margin-top: 0.5vw;
-            width: 670px;
+            width: 34.9vw;
+            @include small-pad-width {
+                margin-bottom: 0;
+            }
+            @include phone-width {
+                margin-bottom: 0;
+            }
         }
     }
     .flex_img_circle {
@@ -78,9 +189,47 @@
             position: relative;
             width: 355px;
             height: 355px;
-            margin: 0 75px;
+            margin: 0 3.9vw;
             border-radius: 50%;
             background-color: #ffffff;
+            @include pad-width {
+                width: 250px;
+                height: 250px;
+            }
+            @include small-pad-width {
+                width: 130px;
+                height: 130px;
+                margin: 0 7px;
+            }
+            @include phone-width {
+                width: 125px;
+                height: 125px;
+                margin: 0;
+            }
+            .img1 {
+                width: 10.73vw;
+                height: 6.875vw;
+                @include small-pad-width {
+                    width: 92px;
+                    height: 58px;
+                }
+                @include phone-width {
+                    width: 92px;
+                    height: 58px;
+                }
+            }
+            .img2 {
+                width: 9.64vw;
+                height: 9.64vw;
+                @include small-pad-width {
+                    width: 82px;
+                    height: 82px;
+                }
+                @include phone-width {
+                    width: 82px;
+                    height: 82px;
+                }
+            }
             &_mask {
                 position: absolute;
                 background-color: rgba($color: #00802F, $alpha: 0.8);
@@ -91,9 +240,29 @@
                 cursor: pointer;
                 border-radius: 50%;
                 z-index: 9;
+                @include pad-width {
+                    width: 250px;
+                    height: 250px;
+                }
+                @include small-pad-width {
+                    width: 130px;
+                    height: 130px;
+                }
+                @include phone-width {
+                    width: 125px;
+                    height: 125px;
+                }
                 .word {
                     position: relative;
                     top: 45%;
+                    @include small-pad-width {
+                        top: 35%;
+                        font-size: 19px;
+                    }
+                    @include phone-width {
+                        top: 35%;
+                        font-size: 19px;
+                    }
                 }
             }
             img {
