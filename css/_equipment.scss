@@ -6,13 +6,35 @@
         font-weight: bolder;
         color: $green;
         padding-top: 5.2vw;
+        @include small-pad-width {
+            font-size: 26px;
+            line-height: 40px;
+            padding-top: 75px;
+        }
+        @include phone-width {
+            font-size: 26px;
+            line-height: 40px;
+            padding-top: 75px;
+        }
     }
     h2 {
         font-size: 1.5vw;
         font-weight: bold;
         color: $black;
-        padding-top: 2.6vw;
-        padding-bottom: 1vw;
+        margin-top: 2.6vw;
+        margin-bottom: 1vw;
+        @include small-pad-width {
+            font-size: 16px;
+            line-height: 26px;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+        @include phone-width {
+            font-size: 16px;
+            line-height: 26px;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
     }
     p {
         width: 52vw;
@@ -21,19 +43,63 @@
         font-size: 1.1vw;
         color: $black;
         padding-bottom: 2.6vw;
+        @include small-pad-width {
+            width: 100%;
+            font-size: 14px;
+            line-height: 24px;
+            margin-bottom: 50px;
+        }
+        @include phone-width {
+            width: 100%;
+            font-size: 14px;
+            line-height: 24px;
+            margin-bottom: 50px;
+        }
     }
-    .group {
+    .equi_group {
         display: flex;
         flex-wrap: wrap;
         padding-bottom: 5.2vw;
+        @include small-pad-width {
+            justify-content: center;
+        }
+        @include phone-width {
+            justify-content: center;
+        }
         &_box {
+            width: 30%;
+            margin: 0 1.04vw;
             margin-bottom: 2.6vw;
-            margin: 0 20px;
+            @include pad-width {
+                width: 47%;
+            }
+            @include small-pad-width {
+                width: 100%;
+            }
+            @include phone-width {
+                width: 100%;
+            }
             img {
                 margin-bottom: 1vw;
+                width: 22.92vw;
+                height: 13.54vw;
+                @include small-pad-width {
+                    width: 100%;
+                    height: 200px;
+                }
+                @include phone-width {
+                    width: 100%;
+                    height: 200px;
+                }
             }
             p {
-                width: 22.9vw;
+                width: 100%;
+                @include small-pad-width {
+                    white-space: nowrap;
+                }
+                @include phone-width {
+                    white-space: nowrap;
+                }
             }
         }
     }

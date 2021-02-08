@@ -186,9 +186,28 @@
         padding-bottom: 7.8vw;
         .vision_box {
             width: 73vw;
-            height: 530px;
+            height: 27.6vw;
             overflow: hidden;
+            margin: 0 auto;
             margin-bottom: 1.25vw;
+            background-position: center center;
+            @include pad-width {
+                overflow: visible;
+                margin-bottom: 150px;
+                background-size: cover;
+            }
+            @include small-pad-width {
+                overflow: visible;
+                margin-bottom: 100px;
+                width: 100%;
+                background-size: cover;
+            }
+            @include phone-width {
+                overflow: visible;
+                margin-bottom: 100px;
+                width: 100%;
+                background-size: cover;
+            }
             &_info {
                 position: relative;
                 width: 700px;
@@ -198,13 +217,25 @@
                 margin-top: -4.1vw;
                 margin-left: -3.2vw;
                 @include pad-width {
-
+                    margin: 0;
+                    bottom: -100%;
+                    width: 100%;
+                    height: 125px;
+                    transform: rotate(0);
                 }
                 @include small-pad-width {
-
+                    margin: 0;
+                    bottom: -100%;
+                    width: 100%;
+                    height: 75px;
+                    transform: rotate(0);
                 }
                 @include phone-width {
-
+                    margin: 0;
+                    bottom: -100%;
+                    width: 100%;
+                    height: 75px;
+                    transform: rotate(0);
                 }
                 .word {
                     position: absolute;
@@ -217,12 +248,23 @@
                     left: 20%;
                     color: $white;
                     @include pad-width {
-
+                        padding: 10px;
+                        transform: rotate(0) translateY(-50%);
+                        top: 50%;
+                        left: 0%;
                     }
                     @include small-pad-width {
-
+                        padding: 10px;
+                        transform: rotate(0) translateY(-50%);
+                        top: 50%;
+                        left: 0%;
                     }
                     @include phone-width {
+                        padding: 10px;
+                        transform: rotate(0) translateY(-50%);
+                        top: 50%;
+                        left: 0%;
+                        line-height: 16px;
 
                     }
                     &_title {
@@ -237,8 +279,32 @@
                 height: 800px;
                 background-color: $deep_green;
                 transform: rotate(15deg);
+                line-height: 3.1vw;
                 margin-top: -4.1vw;
                 margin-left: 55%;
+                @include pad-width {
+                    margin: 0;
+                    bottom: -100%;
+                    width: 100%;
+                    height: 125px;
+                    transform: rotate(0);
+                }
+                @include small-pad-width {
+                    margin: 0;
+                    bottom: -100%;
+                    width: 100%;
+                    height: 75px;
+                    transform: rotate(0);
+
+                }
+                @include phone-width {
+                    margin: 0;
+                    bottom: -100%;
+                    width: 100%;
+                    height: 75px;
+                    transform: rotate(0);
+
+                }
                 .word {
                     position: absolute;
                     transform: rotate(-15deg);
@@ -249,12 +315,24 @@
                     left: 10%;
                     color: $white;
                     @include pad-width {
-
+                        padding: 10px;
+                        transform: rotate(0) translateY(-50%);
+                        top: 50%;
+                        left: 0%;
                     }
                     @include small-pad-width {
+                        padding: 10px;
+                        transform: rotate(0) translateY(-50%);
+                        top: 50%;
+                        left: 0%;
 
                     }
                     @include phone-width {
+                        padding: 10px;
+                        transform: rotate(0) translateY(-50%);
+                        top: 50%;
+                        left: 0%;
+                        line-height: 16px;
 
                     }
                     &_title {

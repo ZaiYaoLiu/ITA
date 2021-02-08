@@ -22,11 +22,35 @@
     }
     .navbar {
         background-color: $green;
+        position: relative;
+        .to-down {
+            cursor: pointer;
+            position: absolute;
+            right: 0;
+            bottom: -200%;
+            color: $white;
+            z-index: 999999999999999;
+            @include small-pad-width {
+                display: none;
+            }
+            @include phone-width {
+                display: none;
+            }
+            img {
+                display: flex;
+                margin: 0 auto;
+                margin-top: 30px;
+            }
+            div {
+                transform: rotate(270deg);
+            }
+        }
         &_content {
             margin: 0 11.5vw;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            z-index: 9999999999999999999999999999999;
         }
         &_icon {
             padding: 27px 0;

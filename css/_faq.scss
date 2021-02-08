@@ -7,6 +7,16 @@
         color: $green;
         padding-top: 5.2vw;
         padding-bottom: 2.6vw;
+        @include small-pad-width {
+            font-size: 26px;
+            line-height: 40px;
+            padding-top: 75px;
+        }
+        @include phone-width {
+            font-size: 26px;
+            line-height: 40px;
+            padding-top: 75px;
+        }
     }
     p {
         width: 52vw;
@@ -15,6 +25,18 @@
         font-size: 1.1vw;
         color: $black;
         padding-bottom: 3.1vw;
+        @include small-pad-width {
+            width: 100%;
+            font-size: 14px;
+            line-height: 24px;
+            margin-bottom: 50px;
+        }
+        @include phone-width {
+            width: 100%;
+            font-size: 14px;
+            line-height: 24px;
+            margin-bottom: 50px;
+        }
     }
     .search_from {
         display: flex;
@@ -24,7 +46,7 @@
             position: relative;
             background-color: $white;
             width: 450px;
-            height: 2.6vw;
+            height: 50px;
             border-radius: 25px;
             img {
                 position: absolute;
@@ -34,8 +56,9 @@
                 left: 4%;
             }
             input {
+                text-align: center;
                 width: 300px;
-                padding: 14px;
+                padding: 15px;
                 font-size: 0.9vw;
                 line-height: 1.1vw;
             }

@@ -2,6 +2,12 @@
 .products_info {
     text-align: center;
     padding-top: 5.2vw;
+    @include small-pad-width {
+        padding-top: 50px;
+    }
+    @include phone-width {
+        padding-top: 50px;
+    }
     &_sub {
         display: flex;
         justify-content: center;
@@ -66,6 +72,16 @@
         color: $green;
         padding-top: 5.2vw;
         padding-bottom: 2.6vw;
+        @include small-pad-width {
+            font-size: 26px;
+            line-height: 40px;
+            padding-top: 75px;
+        }
+        @include phone-width {
+            font-size: 26px;
+            line-height: 40px;
+            padding-top: 75px;
+        }
     }
     p {
         width: 52vw;
@@ -74,6 +90,18 @@
         font-size: 1.1vw;
         color: $black;
         padding-bottom: 3.1vw;
+        @include small-pad-width {
+            width: 100%;
+            font-size: 14px;
+            line-height: 24px;
+            margin-bottom: 50px;
+        }
+        @include phone-width {
+            width: 100%;
+            font-size: 14px;
+            line-height: 24px;
+            margin-bottom: 50px;
+        }
     }
     .pd_group {
         padding-bottom: 150px;

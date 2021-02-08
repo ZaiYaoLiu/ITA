@@ -7,6 +7,16 @@
         color: $green;
         padding-top: 5.2vw;
         padding-bottom: 2.6vw;
+        @include small-pad-width {
+            font-size: 26px;
+            line-height: 40px;
+            padding-top: 75px;
+        }
+        @include phone-width {
+            font-size: 26px;
+            line-height: 40px;
+            padding-top: 75px;
+        }
     }
     p {
         width: 52vw;
@@ -15,10 +25,31 @@
         font-size: 1.1vw;
         color: $black;
         padding-bottom: 3.1vw;
+        @include small-pad-width {
+            width: 100%;
+            font-size: 14px;
+            line-height: 24px;
+            margin-bottom: 50px;
+        }
+        @include phone-width {
+            width: 100%;
+            font-size: 14px;
+            line-height: 24px;
+            margin-bottom: 50px;
+        }
     }
     .group {
         display: flex;
         justify-content: space-between;
+        @include pad-width {
+            display: block;
+        }
+        @include small-pad-width {
+            display: block;
+        }
+        @include phone-width {
+            display: block;
+        }
         .fancybox {
             display: block;
             position: relative;
@@ -36,6 +67,9 @@
                         bottom: 5%;
                     }
                 }
+                .image {
+                    width: 100%;
+                }
             }
             &:hover {
                 .image {
@@ -49,6 +83,18 @@
             margin-top: 1vw;
             font-size: 1.5vw;
             font-weight: bold;
+            @include small-pad-width {
+                width: 100%;
+                font-size: 14px;
+                line-height: 24px;
+                margin-bottom: 50px;
+            }
+            @include phone-width {
+                width: 100%;
+                font-size: 14px;
+                line-height: 24px;
+                margin-bottom: 50px;
+            }
         }
     }
     .title {
@@ -57,6 +103,18 @@
         font-weight: bold;
         margin-top: 5.2vw;
         margin-bottom: 3.1vw;
+        @include small-pad-width {
+            font-size: 16px;
+            line-height: 26px;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+        @include phone-width {
+            font-size: 16px;
+            line-height: 26px;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
     }
     .other_group {
         display: flex;
@@ -64,6 +122,15 @@
         width: 72.9vw;
         margin: 0 auto;
         padding-bottom: 7.8vw;
+        @include pad-width {
+
+        }
+        @include small-pad-width {
+
+        }
+        @include phone-width {
+
+        }
         .box {
             width: 445px;
             height: 205px;
@@ -72,6 +139,15 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            @include pad-width {
+                width: 48%;
+            }
+            @include small-pad-width {
+                width: 100%;
+            }
+            @include phone-width {
+                width: 100%;
+            }
             .fancybox {
                 display: block;
                 position: relative;
@@ -103,6 +179,18 @@
                     font-size: 1.3vw;
                     font-weight: bold;
                     text-align: left;
+                    @include small-pad-width {
+                        font-size: 16px;
+                        line-height: 26px;
+                        margin-top: 20px;
+                        margin-bottom: 40px;
+                    }
+                    @include phone-width {
+                        font-size: 16px;
+                        line-height: 26px;
+                        margin-top: 20px;
+                        margin-bottom: 40px;
+                    }
                 }
                 p {
                     text-align: left;
@@ -111,6 +199,18 @@
                     font-size: 0.9vw;
                     padding-top: 1vw;
                     padding-bottom: 0;
+                    @include small-pad-width {
+                        width: 100%;
+                        font-size: 14px;
+                        line-height: 24px;
+                        margin-bottom: 50px;
+                    }
+                    @include phone-width {
+                        width: 100%;
+                        font-size: 14px;
+                        line-height: 24px;
+                        margin-bottom: 50px;
+                    }
                 }
             }
         }
